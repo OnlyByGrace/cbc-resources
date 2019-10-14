@@ -1,0 +1,51 @@
+:host {
+    background-color: white;
+    display: block;
+    padding: 17px 25px 17px 25px;
+    // margin-left: 5%;
+    // margin-right: 5%;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    // filter: blur(8px);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-right: 80px;
+}
+
+.type {
+    position: absolute;
+    right: 0px;
+    top: 13px;
+    background-color: #b4aa9e;
+    color: white;
+    padding: 7px 20px 7px 20px;
+    font-size: 13px;
+}
+
+.content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-height: 65px;
+    overflow: hidden;
+}
+
+
+.card-footer {
+    font-size: 10px;
+    display: flex;
+
+    div {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    div:first-child {
+        padding-left: 0px;
+    }
+}

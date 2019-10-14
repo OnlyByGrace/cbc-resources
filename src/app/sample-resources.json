@@ -1,0 +1,1002 @@
+[
+	{
+		"title": "orci. Donec nibh. Quisque",
+		"preview": "eu tempor erat neque non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus. Nullam scelerisque neque sed sem egestas blandit. Nam nulla magna, malesuada vel, convallis in, cursus et, eros. Proin ultrices.",
+		"author": "Kim Faucette",
+		"date": "2019-01-02T02:41:25-08:00",
+		"topic": "Grief",
+		"type": "Video",
+		"scripture": "Philemon",
+		"series": "Psalms"
+	},
+	{
+		"title": "lobortis ultrices. Vivamus rhoncus. Donec",
+		"preview": "cubilia Curae; Phasellus ornare. Fusce mollis. Duis sit amet diam eu dolor egestas rhoncus. Proin nisl sem, consequat nec, mollis vitae, posuere at, velit. Cras lorem lorem, luctus ut, pellentesque eget, dictum placerat, augue. Sed molestie. Sed id risus",
+		"author": "Jonathan Fylstra",
+		"date": "2020-08-02T22:23:04-07:00",
+		"topic": "Joy",
+		"type": "Sermon",
+		"scripture": "Ephesians",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "a, dui.",
+		"preview": "tincidunt, nunc ac mattis ornare, lectus ante dictum mi, ac mattis velit justo nec ante. Maecenas mi felis, adipiscing fringilla, porttitor vulputate, posuere vulputate, lacus. Cras interdum. Nunc sollicitudin commodo",
+		"author": "Jonathan Fylstra",
+		"date": "2019-06-11T22:50:14-07:00",
+		"topic": "Joy",
+		"type": "Sermon",
+		"scripture": "2 Peter",
+		"series": "Psalms"
+	},
+	{
+		"title": "at pede. Cras",
+		"preview": "vulputate mauris sagittis placerat. Cras dictum ultricies ligula. Nullam enim. Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec mauris blandit mattis.",
+		"author": "Jeff Baxley",
+		"date": "2019-06-29T20:15:38-07:00",
+		"topic": "Leadership",
+		"type": "Video",
+		"scripture": "Revelation",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "suscipit, est ac",
+		"preview": "aliquet magna a neque. Nullam ut nisi a odio semper cursus. Integer mollis. Integer tincidunt aliquam arcu. Aliquam ultrices iaculis odio. Nam interdum enim non nisi. Aenean eget metus. In nec orci. Donec nibh. Quisque nonummy ipsum non arcu. Vivamus sit amet risus. Donec egestas. Aliquam nec enim. Nunc ut",
+		"author": "Luke Bennett",
+		"date": "2019-01-17T08:51:53-08:00",
+		"topic": "Joy",
+		"type": "Video",
+		"scripture": "Jude",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "turpis egestas.",
+		"preview": "at, iaculis quis, pede. Praesent eu dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eget magna. Suspendisse tristique neque venenatis lacus. Etiam bibendum fermentum metus. Aenean sed",
+		"author": "Jonathan Fylstra",
+		"date": "2018-12-15T14:14:17-08:00",
+		"topic": "Worship",
+		"type": "Article",
+		"scripture": "Revelation",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "erat nonummy ultricies ornare, elit",
+		"preview": "vitae diam. Proin dolor. Nulla semper tellus id nunc interdum feugiat. Sed nec metus facilisis lorem tristique aliquet. Phasellus fermentum convallis ligula. Donec luctus aliquet odio. Etiam ligula tortor, dictum eu, placerat eget, venenatis a,",
+		"author": "Jamie Hyden",
+		"date": "2020-09-22T05:10:28-07:00",
+		"topic": "Worship",
+		"type": "Sermon",
+		"scripture": "2 Peter",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "vulputate eu, odio. Phasellus",
+		"preview": "neque venenatis lacus. Etiam bibendum fermentum metus. Aenean sed pede nec ante blandit viverra. Donec tempus, lorem fringilla ornare placerat, orci lacus vestibulum lorem, sit amet ultricies sem magna nec quam. Curabitur vel lectus. Cum sociis natoque penatibus et",
+		"author": "Jeff Baxley",
+		"date": "2019-01-15T14:16:57-08:00",
+		"topic": "Life",
+		"type": "Sermon",
+		"scripture": "1 John",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "vulputate, lacus. Cras interdum.",
+		"preview": "ornare sagittis felis. Donec tempor, est ac mattis semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu, ultrices sit amet,",
+		"author": "Luke Bennett",
+		"date": "2019-02-27T23:10:18-08:00",
+		"topic": "Leadership",
+		"type": "Video",
+		"scripture": "Acts",
+		"series": "Psalms"
+	},
+	{
+		"title": "nec, imperdiet nec,",
+		"preview": "tortor nibh sit amet orci. Ut sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean egestas hendrerit neque. In ornare sagittis felis. Donec tempor, est ac mattis semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula",
+		"author": "Jeff Baxley",
+		"date": "2019-03-22T08:47:40-07:00",
+		"topic": "Life",
+		"type": "Article",
+		"scripture": "Matthew",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "enim. Mauris quis",
+		"preview": "sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec dignissim magna a tortor. Nunc commodo auctor velit. Aliquam nisl. Nulla eu neque pellentesque massa lobortis ultrices. Vivamus rhoncus. Donec",
+		"author": "Luke Bennett",
+		"date": "2018-12-02T05:06:10-08:00",
+		"topic": "Worship",
+		"type": "Video",
+		"scripture": "Matthew",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "dapibus quam quis diam. Pellentesque",
+		"preview": "Sed eu eros. Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer",
+		"author": "Jamie Hyden",
+		"date": "2020-08-15T04:50:46-07:00",
+		"topic": "Life",
+		"type": "Article",
+		"scripture": "Galatians",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "Duis cursus, diam at",
+		"preview": "ac mattis velit justo nec ante. Maecenas mi felis, adipiscing fringilla, porttitor vulputate, posuere vulputate, lacus. Cras interdum. Nunc sollicitudin commodo ipsum. Suspendisse non leo. Vivamus nibh dolor, nonummy ac, feugiat non, lobortis quis, pede.",
+		"author": "Luke Bennett",
+		"date": "2020-06-21T18:13:34-07:00",
+		"topic": "Grief",
+		"type": "Article",
+		"scripture": "Luke",
+		"series": "Psalms"
+	},
+	{
+		"title": "semper tellus id nunc interdum",
+		"preview": "nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem, vitae aliquam eros turpis non enim. Mauris quis turpis vitae purus gravida sagittis. Duis gravida. Praesent eu nulla at sem molestie sodales.",
+		"author": "Luke Bennett",
+		"date": "2020-08-09T05:47:57-07:00",
+		"topic": "Life",
+		"type": "Video",
+		"scripture": "1 John",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "non, egestas a,",
+		"preview": "tristique pellentesque, tellus sem mollis dui, in sodales elit erat vitae risus. Duis a mi fringilla mi lacinia mattis. Integer eu lacus. Quisque imperdiet, erat nonummy ultricies ornare, elit elit fermentum risus, at fringilla purus mauris a",
+		"author": "Jeff Baxley",
+		"date": "2020-07-16T18:16:40-07:00",
+		"topic": "Joy",
+		"type": "Article",
+		"scripture": "1 Corinthians",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "In tincidunt congue turpis. In",
+		"preview": "nunc interdum feugiat. Sed nec metus facilisis lorem tristique aliquet. Phasellus fermentum convallis ligula. Donec luctus aliquet odio. Etiam ligula tortor, dictum eu, placerat eget, venenatis a, magna. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+		"author": "David Hogg",
+		"date": "2019-02-06T06:32:09-08:00",
+		"topic": "Worship",
+		"type": "Sermon",
+		"scripture": "Romans",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "risus.",
+		"preview": "mauris id sapien. Cras dolor dolor, tempus non, lacinia at, iaculis quis, pede. Praesent eu dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eget magna. Suspendisse tristique neque venenatis lacus. Etiam bibendum fermentum metus.",
+		"author": "David Hogg",
+		"date": "2020-05-28T14:06:30-07:00",
+		"topic": "Joy",
+		"type": "Article",
+		"scripture": "2 Timothy",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "mauris sapien, cursus in,",
+		"preview": "tincidunt congue turpis. In condimentum. Donec at arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec tincidunt. Donec vitae erat vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse ac metus vitae velit egestas lacinia. Sed congue, elit sed consequat auctor, nunc nulla vulputate",
+		"author": "Luke Bennett",
+		"date": "2020-03-15T03:38:36-07:00",
+		"topic": "Leadership",
+		"type": "Video",
+		"scripture": "Ephesians",
+		"series": "Psalms"
+	},
+	{
+		"title": "non enim commodo",
+		"preview": "gravida molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies ligula. Nullam enim. Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec mauris blandit mattis. Cras eget nisi dictum",
+		"author": "Kim Faucette",
+		"date": "2019-03-24T00:48:38-07:00",
+		"topic": "Life",
+		"type": "Video",
+		"scripture": "James",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "nisi. Cum",
+		"preview": "et magnis dis parturient montes, nascetur ridiculus mus. Aenean eget magna. Suspendisse tristique neque venenatis lacus. Etiam bibendum fermentum metus. Aenean sed pede nec ante blandit viverra. Donec tempus, lorem",
+		"author": "Jeff Baxley",
+		"date": "2019-05-03T13:35:21-07:00",
+		"topic": "Joy",
+		"type": "Video",
+		"scripture": "Ephesians",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "risus. Donec",
+		"preview": "Nulla facilisis. Suspendisse commodo tincidunt nibh. Phasellus nulla. Integer vulputate, risus a ultricies adipiscing, enim mi tempor lorem, eget mollis lectus pede et risus. Quisque libero lacus, varius et, euismod et, commodo at, libero. Morbi accumsan laoreet ipsum. Curabitur",
+		"author": "Jamie Hyden",
+		"date": "2018-10-22T15:22:46-07:00",
+		"topic": "Joy",
+		"type": "Sermon",
+		"scripture": "Philippians",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "Mauris nulla.",
+		"preview": "nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem, vitae aliquam eros turpis non enim. Mauris quis turpis vitae purus gravida sagittis. Duis gravida. Praesent eu nulla at sem molestie sodales. Mauris blandit enim consequat purus. Maecenas libero",
+		"author": "Luke Bennett",
+		"date": "2019-08-30T10:52:02-07:00",
+		"topic": "Joy",
+		"type": "Sermon",
+		"scripture": "1 John",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "Ut tincidunt vehicula risus.",
+		"preview": "nec tellus. Nunc lectus pede, ultrices a, auctor non, feugiat nec, diam. Duis mi enim, condimentum eget, volutpat ornare, facilisis eget, ipsum. Donec sollicitudin adipiscing ligula. Aenean gravida nunc sed pede. Cum sociis natoque penatibus",
+		"author": "Jeff Baxley",
+		"date": "2020-08-13T17:54:18-07:00",
+		"topic": "Grief",
+		"type": "Video",
+		"scripture": "Acts",
+		"series": "Psalms"
+	},
+	{
+		"title": "faucibus. Morbi",
+		"preview": "tincidunt, neque vitae semper egestas, urna justo faucibus lectus, a sollicitudin orci sem eget massa. Suspendisse eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer in magna. Phasellus dolor elit, pellentesque a, facilisis non, bibendum sed, est. Nunc laoreet lectus quis massa. Mauris vestibulum, neque sed dictum eleifend, nunc",
+		"author": "Luke Bennett",
+		"date": "2019-02-26T14:40:52-08:00",
+		"topic": "Worship",
+		"type": "Sermon",
+		"scripture": "2 Timothy",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "interdum. Curabitur dictum. Phasellus",
+		"preview": "Integer urna. Vivamus molestie dapibus ligula. Aliquam erat volutpat. Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit.",
+		"author": "Jamie Hyden",
+		"date": "2019-07-30T14:47:58-07:00",
+		"topic": "Grief",
+		"type": "Video",
+		"scripture": "Philippians",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "Nam consequat",
+		"preview": "sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eget magna. Suspendisse tristique neque venenatis lacus. Etiam bibendum fermentum metus. Aenean sed pede nec ante blandit viverra. Donec tempus, lorem fringilla ornare placerat, orci lacus",
+		"author": "Jonathan Fylstra",
+		"date": "2019-01-11T09:35:38-08:00",
+		"topic": "Worship",
+		"type": "Article",
+		"scripture": "Luke",
+		"series": "Psalms"
+	},
+	{
+		"title": "vulputate ullamcorper magna.",
+		"preview": "mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id magna et ipsum cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna. Nam ligula elit,",
+		"author": "Jamie Hyden",
+		"date": "2020-01-08T11:31:52-08:00",
+		"topic": "Grief",
+		"type": "Sermon",
+		"scripture": "Revelation",
+		"series": "Psalms"
+	},
+	{
+		"title": "molestie",
+		"preview": "molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies ligula. Nullam enim. Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin",
+		"author": "Jeff Baxley",
+		"date": "2019-05-17T04:45:42-07:00",
+		"topic": "Leadership",
+		"type": "Sermon",
+		"scripture": "3 John",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "viverra.",
+		"preview": "sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean egestas hendrerit neque. In ornare sagittis felis. Donec tempor, est ac mattis semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu, ultrices sit amet,",
+		"author": "Luke Bennett",
+		"date": "2019-04-17T10:45:27-07:00",
+		"topic": "Leadership",
+		"type": "Sermon",
+		"scripture": "Philippians",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "mauris, rhoncus id, mollis",
+		"preview": "lorem, eget mollis lectus pede et risus. Quisque libero lacus, varius et, euismod et, commodo at, libero. Morbi accumsan laoreet ipsum. Curabitur consequat, lectus sit amet luctus vulputate, nisi sem semper erat, in consectetuer ipsum nunc id enim. Curabitur massa. Vestibulum accumsan neque et nunc. Quisque ornare tortor",
+		"author": "Jamie Hyden",
+		"date": "2020-08-02T09:01:41-07:00",
+		"topic": "Life",
+		"type": "Article",
+		"scripture": "2 Timothy",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "Morbi",
+		"preview": "bibendum ullamcorper. Duis cursus, diam at pretium aliquet, metus urna convallis erat, eget tincidunt dui augue eu tellus. Phasellus elit pede, malesuada vel, venenatis vel, faucibus id, libero. Donec consectetuer mauris id sapien. Cras dolor dolor, tempus non, lacinia at,",
+		"author": "Nathan Tarr",
+		"date": "2020-06-14T15:01:45-07:00",
+		"topic": "Leadership",
+		"type": "Article",
+		"scripture": "Revelation",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "massa.",
+		"preview": "ornare, libero at auctor ullamcorper, nisl arcu iaculis enim, sit amet ornare lectus justo eu arcu. Morbi sit amet massa. Quisque porttitor eros nec tellus. Nunc lectus pede, ultrices a, auctor non, feugiat nec,",
+		"author": "Jonathan Fylstra",
+		"date": "2020-03-03T20:25:19-08:00",
+		"topic": "Worship",
+		"type": "Sermon",
+		"scripture": "Mark",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "vel lectus. Cum sociis",
+		"preview": "fermentum arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus ornare. Fusce mollis. Duis sit amet diam eu dolor egestas rhoncus. Proin nisl sem, consequat nec, mollis vitae, posuere at, velit. Cras lorem lorem,",
+		"author": "Jamie Hyden",
+		"date": "2019-10-02T15:27:56-07:00",
+		"topic": "Grief",
+		"type": "Sermon",
+		"scripture": "Hebrews",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "ad litora torquent per conubia",
+		"preview": "turpis. In condimentum. Donec at arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec tincidunt. Donec vitae erat vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse ac metus vitae velit egestas lacinia.",
+		"author": "Kim Faucette",
+		"date": "2019-03-19T07:12:36-07:00",
+		"topic": "Worship",
+		"type": "Article",
+		"scripture": "Matthew",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "Nulla facilisi. Sed",
+		"preview": "Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem semper auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi pede, nonummy ut, molestie in, tempus eu, ligula. Aenean euismod mauris eu elit. Nulla",
+		"author": "Jeff Baxley",
+		"date": "2018-11-15T00:32:14-08:00",
+		"topic": "Joy",
+		"type": "Article",
+		"scripture": "2 Corinthians",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "in felis.",
+		"preview": "semper erat, in consectetuer ipsum nunc id enim. Curabitur massa. Vestibulum accumsan neque et nunc. Quisque ornare tortor at risus. Nunc ac sem ut dolor dapibus gravida. Aliquam tincidunt, nunc ac mattis ornare, lectus ante dictum mi, ac mattis velit",
+		"author": "David Hogg",
+		"date": "2020-09-02T08:53:56-07:00",
+		"topic": "Worship",
+		"type": "Video",
+		"scripture": "2 Corinthians",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "in, tempus eu,",
+		"preview": "metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut cursus luctus, ipsum",
+		"author": "Nathan Tarr",
+		"date": "2020-10-07T16:40:20-07:00",
+		"topic": "Leadership",
+		"type": "Article",
+		"scripture": "Philippians",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "commodo",
+		"preview": "tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem, vitae aliquam eros turpis non enim. Mauris quis turpis vitae",
+		"author": "Jeff Baxley",
+		"date": "2020-05-23T05:30:15-07:00",
+		"topic": "Life",
+		"type": "Sermon",
+		"scripture": "John",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "Phasellus fermentum",
+		"preview": "egestas rhoncus. Proin nisl sem, consequat nec, mollis vitae, posuere at, velit. Cras lorem lorem, luctus ut, pellentesque eget, dictum placerat, augue. Sed molestie. Sed id risus quis diam luctus lobortis. Class aptent taciti sociosqu ad",
+		"author": "Jeff Baxley",
+		"date": "2020-07-10T15:40:27-07:00",
+		"topic": "Leadership",
+		"type": "Article",
+		"scripture": "Philippians",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "Nunc",
+		"preview": "Vivamus molestie dapibus ligula. Aliquam erat volutpat. Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit. Sed malesuada augue ut lacus. Nulla tincidunt, neque vitae semper",
+		"author": "Jeff Baxley",
+		"date": "2018-12-12T03:41:07-08:00",
+		"topic": "Life",
+		"type": "Sermon",
+		"scripture": "Ephesians",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "sollicitudin adipiscing ligula. Aenean gravida",
+		"preview": "Aliquam erat volutpat. Nulla facilisis. Suspendisse commodo tincidunt nibh. Phasellus nulla. Integer vulputate, risus a ultricies adipiscing, enim mi tempor lorem, eget mollis lectus pede et risus. Quisque libero lacus, varius et, euismod et, commodo at, libero. Morbi accumsan laoreet ipsum. Curabitur consequat, lectus sit amet",
+		"author": "Nathan Tarr",
+		"date": "2020-05-11T02:08:22-07:00",
+		"topic": "Leadership",
+		"type": "Sermon",
+		"scripture": "Romans",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "dis",
+		"preview": "pellentesque massa lobortis ultrices. Vivamus rhoncus. Donec est. Nunc ullamcorper, velit in aliquet lobortis, nisi nibh lacinia orci, consectetuer euismod est arcu ac orci. Ut semper pretium neque. Morbi quis urna. Nunc quis arcu vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue turpis. In condimentum. Donec at arcu.",
+		"author": "Kim Faucette",
+		"date": "2020-07-07T12:32:50-07:00",
+		"topic": "Joy",
+		"type": "Article",
+		"scripture": "1 Peter",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "magnis dis parturient montes,",
+		"preview": "est tempor bibendum. Donec felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus. Duis elementum, dui quis accumsan convallis, ante lectus convallis est, vitae sodales nisi magna sed dui. Fusce aliquam, enim nec",
+		"author": "Kim Faucette",
+		"date": "2020-06-19T21:53:06-07:00",
+		"topic": "Grief",
+		"type": "Sermon",
+		"scripture": "Philippians",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "vestibulum nec,",
+		"preview": "ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In faucibus. Morbi vehicula. Pellentesque tincidunt tempus risus. Donec egestas. Duis ac arcu. Nunc mauris. Morbi non sapien molestie",
+		"author": "Kim Faucette",
+		"date": "2020-05-17T11:45:26-07:00",
+		"topic": "Life",
+		"type": "Video",
+		"scripture": "Philippians",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "Sed",
+		"preview": "at, egestas a, scelerisque sed, sapien. Nunc pulvinar arcu et pede. Nunc sed orci lobortis augue scelerisque mollis. Phasellus libero mauris, aliquam eu, accumsan sed, facilisis vitae, orci. Phasellus dapibus quam",
+		"author": "Kim Faucette",
+		"date": "2019-09-29T00:21:07-07:00",
+		"topic": "Grief",
+		"type": "Video",
+		"scripture": "Hebrews",
+		"series": "Psalms"
+	},
+	{
+		"title": "lobortis, nisi",
+		"preview": "dui, in sodales elit erat vitae risus. Duis a mi fringilla mi lacinia mattis. Integer eu lacus. Quisque imperdiet, erat nonummy ultricies ornare, elit elit fermentum risus, at fringilla purus mauris a nunc. In at pede. Cras vulputate velit eu sem. Pellentesque ut ipsum ac mi eleifend egestas.",
+		"author": "Kim Faucette",
+		"date": "2019-12-01T07:43:49-08:00",
+		"topic": "Life",
+		"type": "Article",
+		"scripture": "2 Timothy",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "malesuada malesuada.",
+		"preview": "consectetuer, cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, est ac facilisis facilisis, magna tellus faucibus leo, in lobortis tellus justo sit amet nulla. Donec non justo. Proin non massa",
+		"author": "Luke Bennett",
+		"date": "2018-12-18T19:35:35-08:00",
+		"topic": "Life",
+		"type": "Video",
+		"scripture": "John",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "dolor elit, pellentesque a, facilisis",
+		"preview": "non justo. Proin non massa non ante bibendum ullamcorper. Duis cursus, diam at pretium aliquet, metus urna convallis erat, eget tincidunt dui augue eu tellus. Phasellus elit pede, malesuada vel, venenatis vel, faucibus id, libero. Donec consectetuer mauris id sapien. Cras",
+		"author": "David Hogg",
+		"date": "2019-08-16T19:29:48-07:00",
+		"topic": "Joy",
+		"type": "Article",
+		"scripture": "2 John",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "ullamcorper. Duis cursus, diam",
+		"preview": "nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus id, blandit at, nisi.",
+		"author": "Jonathan Fylstra",
+		"date": "2019-09-06T18:48:18-07:00",
+		"topic": "Grief",
+		"type": "Sermon",
+		"scripture": "Luke",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "sagittis placerat. Cras",
+		"preview": "urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravida non, sollicitudin a, malesuada id, erat. Etiam vestibulum massa rutrum magna. Cras convallis convallis dolor. Quisque tincidunt pede ac urna. Ut tincidunt vehicula risus. Nulla eget metus",
+		"author": "Jeff Baxley",
+		"date": "2020-07-05T20:40:32-07:00",
+		"topic": "Life",
+		"type": "Video",
+		"scripture": "Philippians",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "Aliquam erat volutpat.",
+		"preview": "scelerisque sed, sapien. Nunc pulvinar arcu et pede. Nunc sed orci lobortis augue scelerisque mollis. Phasellus libero mauris, aliquam eu, accumsan sed, facilisis vitae, orci. Phasellus dapibus quam quis diam.",
+		"author": "Jeff Baxley",
+		"date": "2019-05-26T18:41:39-07:00",
+		"topic": "Worship",
+		"type": "Sermon",
+		"scripture": "Luke",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "nec, malesuada",
+		"preview": "fringilla ornare placerat, orci lacus vestibulum lorem, sit amet ultricies sem magna nec quam. Curabitur vel lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec dignissim magna a tortor. Nunc commodo auctor velit. Aliquam nisl.",
+		"author": "Jeff Baxley",
+		"date": "2019-10-31T04:12:49-07:00",
+		"topic": "Grief",
+		"type": "Video",
+		"scripture": "John",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "quis accumsan convallis,",
+		"preview": "augue ut lacus. Nulla tincidunt, neque vitae semper egestas, urna justo faucibus lectus, a sollicitudin orci sem eget massa. Suspendisse eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer in magna. Phasellus dolor elit, pellentesque a, facilisis non, bibendum sed, est. Nunc laoreet lectus",
+		"author": "Jeff Baxley",
+		"date": "2019-06-10T04:56:43-07:00",
+		"topic": "Worship",
+		"type": "Sermon",
+		"scripture": "John",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "convallis, ante",
+		"preview": "Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna. Nam ligula elit, pretium et, rutrum non, hendrerit id, ante. Nunc mauris sapien, cursus in,",
+		"author": "Jonathan Fylstra",
+		"date": "2020-05-12T01:24:30-07:00",
+		"topic": "Grief",
+		"type": "Article",
+		"scripture": "John",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "eleifend, nunc risus varius orci,",
+		"preview": "suscipit, est ac facilisis facilisis, magna tellus faucibus leo, in lobortis tellus justo sit amet nulla. Donec non justo. Proin non massa non ante bibendum ullamcorper. Duis cursus, diam at pretium aliquet, metus urna convallis",
+		"author": "Jeff Baxley",
+		"date": "2020-04-13T12:25:09-07:00",
+		"topic": "Leadership",
+		"type": "Video",
+		"scripture": "Luke",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "sociis",
+		"preview": "Ut sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean egestas hendrerit neque. In ornare sagittis felis. Donec tempor, est ac mattis semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem,",
+		"author": "Jonathan Fylstra",
+		"date": "2019-06-09T00:18:12-07:00",
+		"topic": "Worship",
+		"type": "Video",
+		"scripture": "Mark",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "lacus. Quisque",
+		"preview": "Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut cursus luctus,",
+		"author": "Jamie Hyden",
+		"date": "2019-10-27T17:04:50-07:00",
+		"topic": "Worship",
+		"type": "Video",
+		"scripture": "Galatians",
+		"series": "Psalms"
+	},
+	{
+		"title": "amet ante. Vivamus non lorem",
+		"preview": "consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut",
+		"author": "David Hogg",
+		"date": "2020-06-05T05:08:29-07:00",
+		"topic": "Life",
+		"type": "Article",
+		"scripture": "1 Thessalonians",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "consectetuer",
+		"preview": "purus sapien, gravida non, sollicitudin a, malesuada id, erat. Etiam vestibulum massa rutrum magna. Cras convallis convallis dolor. Quisque tincidunt pede ac urna. Ut tincidunt vehicula risus. Nulla eget metus eu erat semper rutrum. Fusce dolor quam, elementum at, egestas a, scelerisque",
+		"author": "Jonathan Fylstra",
+		"date": "2020-02-08T00:19:58-08:00",
+		"topic": "Life",
+		"type": "Article",
+		"scripture": "2 John",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "Suspendisse",
+		"preview": "a, enim. Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem, vitae aliquam eros turpis non enim. Mauris quis turpis vitae purus gravida sagittis. Duis gravida. Praesent eu nulla",
+		"author": "Jeff Baxley",
+		"date": "2018-12-01T08:01:14-08:00",
+		"topic": "Grief",
+		"type": "Sermon",
+		"scripture": "1 Peter",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "pede.",
+		"preview": "dolor, tempus non, lacinia at, iaculis quis, pede. Praesent eu dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eget magna. Suspendisse tristique neque venenatis lacus. Etiam bibendum",
+		"author": "Jamie Hyden",
+		"date": "2019-02-05T12:04:19-08:00",
+		"topic": "Joy",
+		"type": "Article",
+		"scripture": "1 John",
+		"series": "Psalms"
+	},
+	{
+		"title": "urna et arcu imperdiet",
+		"preview": "Cras vulputate velit eu sem. Pellentesque ut ipsum ac mi eleifend egestas. Sed pharetra, felis eget varius ultrices, mauris ipsum porta elit, a feugiat tellus lorem eu metus. In lorem. Donec elementum, lorem ut aliquam iaculis, lacus pede sagittis",
+		"author": "Luke Bennett",
+		"date": "2019-08-28T19:27:25-07:00",
+		"topic": "Life",
+		"type": "Sermon",
+		"scripture": "Luke",
+		"series": "Psalms"
+	},
+	{
+		"title": "nibh. Aliquam ornare, libero at",
+		"preview": "Proin vel nisl. Quisque fringilla euismod enim. Etiam gravida molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies ligula. Nullam enim. Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus.",
+		"author": "Luke Bennett",
+		"date": "2020-09-16T16:30:47-07:00",
+		"topic": "Leadership",
+		"type": "Video",
+		"scripture": "Galatians",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "imperdiet ornare. In",
+		"preview": "quis massa. Mauris vestibulum, neque sed dictum eleifend, nunc risus varius orci, in consequat enim diam vel arcu. Curabitur ut odio vel est tempor bibendum. Donec felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor",
+		"author": "David Hogg",
+		"date": "2019-05-13T18:54:10-07:00",
+		"topic": "Life",
+		"type": "Article",
+		"scripture": "1 Thessalonians",
+		"series": "Psalms"
+	},
+	{
+		"title": "in molestie tortor nibh",
+		"preview": "torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In faucibus. Morbi vehicula. Pellentesque tincidunt tempus risus. Donec egestas. Duis ac arcu. Nunc mauris. Morbi",
+		"author": "Nathan Tarr",
+		"date": "2019-07-07T16:22:29-07:00",
+		"topic": "Life",
+		"type": "Video",
+		"scripture": "Luke",
+		"series": "Psalms"
+	},
+	{
+		"title": "eu, odio. Phasellus at augue",
+		"preview": "neque vitae semper egestas, urna justo faucibus lectus, a sollicitudin orci sem eget massa. Suspendisse eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer in magna. Phasellus dolor elit, pellentesque a, facilisis non, bibendum sed, est. Nunc laoreet lectus quis massa. Mauris vestibulum, neque sed dictum eleifend, nunc risus varius",
+		"author": "David Hogg",
+		"date": "2019-09-27T21:27:33-07:00",
+		"topic": "Life",
+		"type": "Sermon",
+		"scripture": "Philemon",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "eleifend",
+		"preview": "nec, mollis vitae, posuere at, velit. Cras lorem lorem, luctus ut, pellentesque eget, dictum placerat, augue. Sed molestie. Sed id risus quis diam luctus lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In",
+		"author": "Kim Faucette",
+		"date": "2020-01-05T22:34:44-08:00",
+		"topic": "Worship",
+		"type": "Article",
+		"scripture": "Romans",
+		"series": "Psalms"
+	},
+	{
+		"title": "et",
+		"preview": "pellentesque a, facilisis non, bibendum sed, est. Nunc laoreet lectus quis massa. Mauris vestibulum, neque sed dictum eleifend, nunc risus varius orci, in consequat enim diam vel arcu. Curabitur ut odio vel est tempor bibendum. Donec",
+		"author": "Jeff Baxley",
+		"date": "2020-01-31T18:44:59-08:00",
+		"topic": "Joy",
+		"type": "Video",
+		"scripture": "2 Thessalonians",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "adipiscing elit. Etiam laoreet, libero",
+		"preview": "Vivamus nisi. Mauris nulla. Integer urna. Vivamus molestie dapibus ligula. Aliquam erat volutpat. Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla",
+		"author": "David Hogg",
+		"date": "2018-11-13T13:00:12-08:00",
+		"topic": "Joy",
+		"type": "Video",
+		"scripture": "Mark",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "dolor",
+		"preview": "iaculis, lacus pede sagittis augue, eu tempor erat neque non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus. Nullam scelerisque neque sed sem egestas blandit. Nam nulla magna, malesuada vel, convallis in, cursus et, eros. Proin ultrices. Duis volutpat",
+		"author": "Kim Faucette",
+		"date": "2020-03-05T01:07:22-08:00",
+		"topic": "Worship",
+		"type": "Article",
+		"scripture": "Luke",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "in faucibus",
+		"preview": "Donec tempor, est ac mattis semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus id, blandit at, nisi.",
+		"author": "Jonathan Fylstra",
+		"date": "2020-03-01T15:55:02-08:00",
+		"topic": "Joy",
+		"type": "Article",
+		"scripture": "1 Thessalonians",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "malesuada fames ac turpis egestas.",
+		"preview": "sed pede. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel arcu eu odio tristique pharetra. Quisque ac libero nec ligula consectetuer rhoncus. Nullam velit dui, semper et, lacinia vitae, sodales at, velit. Pellentesque ultricies dignissim lacus. Aliquam rutrum lorem ac risus. Morbi",
+		"author": "Jamie Hyden",
+		"date": "2018-12-31T04:09:50-08:00",
+		"topic": "Joy",
+		"type": "Video",
+		"scripture": "3 John",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "Praesent eu dui.",
+		"preview": "fringilla euismod enim. Etiam gravida molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies ligula. Nullam enim. Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin",
+		"author": "Jeff Baxley",
+		"date": "2020-02-10T02:29:05-08:00",
+		"topic": "Life",
+		"type": "Sermon",
+		"scripture": "1 Corinthians",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "est",
+		"preview": "nonummy ultricies ornare, elit elit fermentum risus, at fringilla purus mauris a nunc. In at pede. Cras vulputate velit eu sem. Pellentesque ut ipsum ac mi eleifend egestas. Sed pharetra,",
+		"author": "Kim Faucette",
+		"date": "2020-06-10T02:21:06-07:00",
+		"topic": "Joy",
+		"type": "Video",
+		"scripture": "2 Thessalonians",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "sed,",
+		"preview": "libero. Donec consectetuer mauris id sapien. Cras dolor dolor, tempus non, lacinia at, iaculis quis, pede. Praesent eu dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eget magna. Suspendisse tristique neque venenatis lacus.",
+		"author": "Jamie Hyden",
+		"date": "2019-04-25T21:41:00-07:00",
+		"topic": "Leadership",
+		"type": "Article",
+		"scripture": "Jude",
+		"series": "Psalms"
+	},
+	{
+		"title": "ornare. In faucibus. Morbi",
+		"preview": "velit. Cras lorem lorem, luctus ut, pellentesque eget, dictum placerat, augue. Sed molestie. Sed id risus quis diam luctus lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien",
+		"author": "Luke Bennett",
+		"date": "2019-09-18T18:32:00-07:00",
+		"topic": "Joy",
+		"type": "Video",
+		"scripture": "Matthew",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "luctus sit amet, faucibus",
+		"preview": "molestie sodales. Mauris blandit enim consequat purus. Maecenas libero est, congue a, aliquet vel, vulputate eu, odio. Phasellus at augue id ante dictum cursus. Nunc mauris elit, dictum eu, eleifend nec, malesuada ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue",
+		"author": "Jamie Hyden",
+		"date": "2019-02-23T11:17:53-08:00",
+		"topic": "Leadership",
+		"type": "Sermon",
+		"scripture": "Colossians",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "non quam. Pellentesque",
+		"preview": "cursus in, hendrerit consectetuer, cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, est ac facilisis facilisis, magna tellus faucibus leo, in lobortis tellus justo sit amet nulla. Donec non justo. Proin non massa non ante bibendum ullamcorper. Duis",
+		"author": "Jonathan Fylstra",
+		"date": "2020-09-17T22:57:25-07:00",
+		"topic": "Worship",
+		"type": "Video",
+		"scripture": "3 John",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "vitae semper egestas, urna justo",
+		"preview": "diam eu dolor egestas rhoncus. Proin nisl sem, consequat nec, mollis vitae, posuere at, velit. Cras lorem lorem, luctus ut, pellentesque eget, dictum placerat, augue. Sed molestie. Sed id risus",
+		"author": "David Hogg",
+		"date": "2019-07-03T10:15:00-07:00",
+		"topic": "Leadership",
+		"type": "Sermon",
+		"scripture": "3 John",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "sed, hendrerit a,",
+		"preview": "dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id magna et ipsum cursus",
+		"author": "Jonathan Fylstra",
+		"date": "2019-10-08T03:44:57-07:00",
+		"topic": "Worship",
+		"type": "Article",
+		"scripture": "James",
+		"series": "Psalms"
+	},
+	{
+		"title": "id nunc",
+		"preview": "tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus. Nullam scelerisque neque sed sem egestas blandit. Nam nulla magna, malesuada vel, convallis in, cursus et,",
+		"author": "David Hogg",
+		"date": "2020-06-01T16:50:33-07:00",
+		"topic": "Worship",
+		"type": "Article",
+		"scripture": "2 Corinthians",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "enim, condimentum eget, volutpat ornare,",
+		"preview": "ut cursus luctus, ipsum leo elementum sem, vitae aliquam eros turpis non enim. Mauris quis turpis vitae purus gravida sagittis. Duis gravida. Praesent eu nulla at sem molestie sodales. Mauris blandit enim consequat purus. Maecenas libero est,",
+		"author": "Jeff Baxley",
+		"date": "2019-12-12T00:25:44-08:00",
+		"topic": "Joy",
+		"type": "Article",
+		"scripture": "1 Thessalonians",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "est ac mattis semper, dui",
+		"preview": "pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis",
+		"author": "Jamie Hyden",
+		"date": "2020-08-26T14:10:13-07:00",
+		"topic": "Life",
+		"type": "Sermon",
+		"scripture": "Philemon",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "diam. Pellentesque habitant",
+		"preview": "Nunc commodo auctor velit. Aliquam nisl. Nulla eu neque pellentesque massa lobortis ultrices. Vivamus rhoncus. Donec est. Nunc ullamcorper, velit in aliquet lobortis, nisi nibh lacinia orci, consectetuer euismod est arcu ac orci. Ut",
+		"author": "Kim Faucette",
+		"date": "2019-06-08T22:20:00-07:00",
+		"topic": "Leadership",
+		"type": "Article",
+		"scripture": "2 Timothy",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "amet massa. Quisque porttitor",
+		"preview": "Mauris nulla. Integer urna. Vivamus molestie dapibus ligula. Aliquam erat volutpat. Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris eu",
+		"author": "David Hogg",
+		"date": "2018-11-20T01:18:49-08:00",
+		"topic": "Joy",
+		"type": "Sermon",
+		"scripture": "Philemon",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "vitae dolor. Donec fringilla. Donec",
+		"preview": "Aenean euismod mauris eu elit. Nulla facilisi. Sed neque. Sed eget lacus. Mauris non dui nec urna suscipit nonummy. Fusce fermentum fermentum arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus ornare. Fusce mollis. Duis sit amet diam eu dolor egestas rhoncus. Proin nisl",
+		"author": "David Hogg",
+		"date": "2018-11-01T20:50:08-07:00",
+		"topic": "Joy",
+		"type": "Article",
+		"scripture": "2 Peter",
+		"series": "Psalms"
+	},
+	{
+		"title": "at pretium",
+		"preview": "et, rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus id, blandit at, nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+		"author": "David Hogg",
+		"date": "2020-07-15T09:24:18-07:00",
+		"topic": "Grief",
+		"type": "Article",
+		"scripture": "Titus",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "porttitor eros",
+		"preview": "feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut",
+		"author": "Luke Bennett",
+		"date": "2019-06-28T09:55:11-07:00",
+		"topic": "Joy",
+		"type": "Article",
+		"scripture": "2 John",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "eu nibh",
+		"preview": "at pretium aliquet, metus urna convallis erat, eget tincidunt dui augue eu tellus. Phasellus elit pede, malesuada vel, venenatis vel, faucibus id, libero. Donec consectetuer mauris id sapien. Cras dolor dolor, tempus non, lacinia at, iaculis",
+		"author": "Kim Faucette",
+		"date": "2019-07-03T19:07:56-07:00",
+		"topic": "Joy",
+		"type": "Video",
+		"scripture": "Colossians",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "pede, nonummy ut,",
+		"preview": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec dignissim magna a tortor. Nunc commodo auctor velit. Aliquam nisl. Nulla eu neque pellentesque massa lobortis ultrices. Vivamus",
+		"author": "Luke Bennett",
+		"date": "2020-09-29T19:29:05-07:00",
+		"topic": "Grief",
+		"type": "Video",
+		"scripture": "Acts",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "Cras vulputate",
+		"preview": "faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus. Duis elementum, dui quis accumsan convallis, ante lectus convallis est, vitae sodales nisi magna sed dui. Fusce aliquam,",
+		"author": "Kim Faucette",
+		"date": "2019-07-17T22:15:36-07:00",
+		"topic": "Worship",
+		"type": "Sermon",
+		"scripture": "1 Corinthians",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "erat vel pede blandit",
+		"preview": "vestibulum, neque sed dictum eleifend, nunc risus varius orci, in consequat enim diam vel arcu. Curabitur ut odio vel est tempor bibendum. Donec felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus. Duis elementum, dui quis accumsan",
+		"author": "Nathan Tarr",
+		"date": "2020-08-07T06:17:53-07:00",
+		"topic": "Life",
+		"type": "Article",
+		"scripture": "1 John",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "litora torquent per conubia",
+		"preview": "ligula. Aliquam erat volutpat. Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit. Sed malesuada augue ut lacus. Nulla tincidunt, neque vitae semper egestas, urna justo faucibus",
+		"author": "Nathan Tarr",
+		"date": "2019-05-26T22:00:47-07:00",
+		"topic": "Worship",
+		"type": "Sermon",
+		"scripture": "Hebrews",
+		"series": "Potluck Preaching"
+	},
+	{
+		"title": "feugiat",
+		"preview": "bibendum ullamcorper. Duis cursus, diam at pretium aliquet, metus urna convallis erat, eget tincidunt dui augue eu tellus. Phasellus elit pede, malesuada vel, venenatis vel, faucibus id, libero. Donec consectetuer mauris id sapien. Cras dolor",
+		"author": "Jonathan Fylstra",
+		"date": "2019-01-16T22:01:43-08:00",
+		"topic": "Joy",
+		"type": "Article",
+		"scripture": "Colossians",
+		"series": "Psalms"
+	},
+	{
+		"title": "eu, ultrices sit amet,",
+		"preview": "purus sapien, gravida non, sollicitudin a, malesuada id, erat. Etiam vestibulum massa rutrum magna. Cras convallis convallis dolor. Quisque tincidunt pede ac urna. Ut tincidunt vehicula risus. Nulla eget metus eu erat semper rutrum. Fusce dolor quam, elementum at, egestas a, scelerisque sed, sapien. Nunc pulvinar",
+		"author": "Jonathan Fylstra",
+		"date": "2019-06-10T01:06:39-07:00",
+		"topic": "Joy",
+		"type": "Sermon",
+		"scripture": "2 Peter",
+		"series": "Psalms"
+	},
+	{
+		"title": "placerat, augue. Sed",
+		"preview": "luctus ut, pellentesque eget, dictum placerat, augue. Sed molestie. Sed id risus quis diam luctus lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In faucibus. Morbi vehicula. Pellentesque tincidunt tempus risus. Donec egestas. Duis ac arcu.",
+		"author": "Luke Bennett",
+		"date": "2020-09-19T14:11:56-07:00",
+		"topic": "Joy",
+		"type": "Video",
+		"scripture": "Romans",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "Phasellus ornare. Fusce mollis. Duis",
+		"preview": "felis eget varius ultrices, mauris ipsum porta elit, a feugiat tellus lorem eu metus. In lorem. Donec elementum, lorem ut aliquam iaculis, lacus pede sagittis augue, eu tempor erat neque non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus.",
+		"author": "Luke Bennett",
+		"date": "2020-08-07T13:05:27-07:00",
+		"topic": "Leadership",
+		"type": "Video",
+		"scripture": "Galatians",
+		"series": "Reforming the Reformation"
+	},
+	{
+		"title": "egestas a, dui. Cras",
+		"preview": "non nisi. Aenean eget metus. In nec orci. Donec nibh. Quisque nonummy ipsum non arcu. Vivamus sit amet risus. Donec egestas. Aliquam nec enim. Nunc ut erat. Sed nunc est, mollis",
+		"author": "Nathan Tarr",
+		"date": "2019-08-28T05:25:00-07:00",
+		"topic": "Grief",
+		"type": "Video",
+		"scripture": "Luke",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "Vestibulum accumsan neque et",
+		"preview": "porttitor tellus non magna. Nam ligula elit, pretium et, rutrum non, hendrerit id, ante. Nunc mauris sapien, cursus in, hendrerit consectetuer, cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit,",
+		"author": "Luke Bennett",
+		"date": "2019-11-02T21:36:17-07:00",
+		"topic": "Life",
+		"type": "Article",
+		"scripture": "Matthew",
+		"series": "Further Revelation"
+	},
+	{
+		"title": "orci, adipiscing non, luctus",
+		"preview": "eu arcu. Morbi sit amet massa. Quisque porttitor eros nec tellus. Nunc lectus pede, ultrices a, auctor non, feugiat nec, diam. Duis mi enim, condimentum eget, volutpat ornare, facilisis eget, ipsum. Donec sollicitudin adipiscing ligula. Aenean gravida nunc sed pede. Cum",
+		"author": "Jeff Baxley",
+		"date": "2020-04-16T19:39:33-07:00",
+		"topic": "Worship",
+		"type": "Article",
+		"scripture": "James",
+		"series": "Further Revelation"
+	}
+]

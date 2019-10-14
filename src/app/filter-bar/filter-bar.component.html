@@ -1,0 +1,22 @@
+<div #inner class="inner">
+
+    <div class="search">
+        <span class="fa fa-search"></span>
+    </div>
+
+    <div class="dropdown" *ngFor="let filter of filters" [class.active]="filter.active" (click)="toggleFlyout(filter, $event)" attr.data-filter-name="{{filter.name}}">
+        <span class="text">{{ filter.currentValue?.displayName || filter.name }}</span>
+        <span class="glyph fa fa-angle-down"></span>
+    </div>
+
+    <div class="scroll-indicator" #indicator [style.opacity]="flyoutOpen ? 1 : 0"></div>
+</div>
+
+
+<div class="scroll-more"></div>
+
+<div class="flyout" #flyOut [class.open]="flyoutOpen">
+    <div class="container">
+        <a *ngFor="let term of activeFilter?.possibleValues | async" (click)="valueSelected(activeFilter, term)">{{term.displayName}}</a>
+    </div>
+</div>
