@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
 import { take, delay } from 'rxjs/operators';
 import { Resource } from './Resource';
@@ -13,11 +13,12 @@ import { FilterBarComponent } from './filter-bar/filter-bar.component';
 export class AppComponent implements OnInit {
   title = 'cbc-resources';
   flyoutOpen = false;
+  loading = false;
 
   @ViewChild(FilterBarComponent, {static: true})
   filterBar: FilterBarComponent;
 
-  resources: Observable<Resource[]>;
+  resources: Resource[];
   filters: FilterSet;
   activeFilters: FilterSet;
 
@@ -26,7 +27,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.filters = this._resourceService.getAvailableFilters();
     this.activeFilters = this.filters.filter((filter) => filter.currentValue != undefined)
-    this.resources = this._resourceService.getResources(this.filters);
+    this.loading = true;
+    this._resourceService.getResources(this.filters).subscribe((resources) => {
+      this.resources = resources;
+      this.loading = false;
+    });
   }
 
   flyoutOpened() {
@@ -43,11 +48,24 @@ export class AppComponent implements OnInit {
     this.filterBar.showFilterFlyout(filter);
   }
 
+  filterTopic() {
+    let topic = this.activeFilters.find((filter) => filter.name == 'All Topics' || filter.name == "All Scriptures");
+
+    if (topic) return topic.currentValue.displayName;
+
+    return "";
+  }
+
   fetchResources(filterSet: FilterSet) {
     this.filters = filterSet;
     this.activeFilters = this.filters.filter((filter) => filter.currentValue != undefined)
-    this.resources = this._resourceService.getResources(this.filters).pipe(
-      delay(1500)
-    );
+    this.resources = [];
+    this.loading = true;
+    this._resourceService.getResources(this.filters).pipe(
+      delay(Math.random() * 2000)
+    ).subscribe((resources) => {
+      this.resources = resources;
+      this.loading = false;
+    });
   }
 }

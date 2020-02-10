@@ -6,6 +6,7 @@
     overflow: hidden;
     position: relative;
     background-color: #E5E5E5;
+    color: black;
 
     .inner {
         height: 70px;
@@ -15,6 +16,9 @@
         overflow: auto;
         position: relative;
         scroll-behavior: smooth;
+        color: black;
+
+        text-align: center;
 
         padding-left: 20px;
         padding-right: 40px;
@@ -54,6 +58,21 @@
 
     div.search {
         margin-right: 20px;
+    }
+
+    div.searchbox {
+        max-width: 500px;
+        width: 80%;
+        display: inline-block;
+    }
+
+    input.search-field {
+        width: 100%;
+        font-size: 1.3rem;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid grey;
+        outline: none;
     }
 }
 
@@ -98,4 +117,5 @@
     margin-bottom: 30px;
     margin-top: 30px;
     color: white;
+    text-decoration: none;
 }

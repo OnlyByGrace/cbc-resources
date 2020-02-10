@@ -1,13 +1,22 @@
 <div #inner class="inner">
 
-    <div class="search">
+    <div class="search" (click)="toggleSearch()">
         <span class="fa fa-search"></span>
     </div>
 
-    <div class="dropdown" *ngFor="let filter of filters" [class.active]="filter.active" (click)="toggleFlyout(filter, $event)" attr.data-filter-name="{{filter.name}}">
-        <span class="text">{{ filter.currentValue?.displayName || filter.name }}</span>
-        <span class="glyph fa fa-angle-down"></span>
+    <div class="searchbox" *ngIf="searchMode">
+        <input #search class="search-field" type="text" (keyup)="searchTerm$.next($event.target.value)">
+
+        <span class="fa fa-times" style="padding-left: 15px;" (click)="toggleSearch()"></span>
     </div>
+
+    <ng-container *ngIf="!searchMode">
+        <div class="dropdown" *ngFor="let filter of filters" [class.active]="filter.active"
+            (click)="toggleFlyout(filter, $event)" attr.data-filter-name="{{filter.name}}">
+            <span class="text">{{ filter.currentValue?.displayName || filter.name }}</span>
+            <span class="glyph fa fa-angle-down"></span>
+        </div>
+    </ng-container>
 
     <div class="scroll-indicator" #indicator [style.opacity]="flyoutOpen ? 1 : 0"></div>
 </div>
@@ -17,6 +26,7 @@
 
 <div class="flyout" #flyOut [class.open]="flyoutOpen">
     <div class="container">
-        <a *ngFor="let term of activeFilter?.possibleValues | async" (click)="valueSelected(activeFilter, term)">{{term.displayName}}</a>
+        <a *ngFor="let term of activeFilter?.possibleValues | async"
+            (click)="valueSelected(activeFilter, term)">{{term.displayName}}</a>
     </div>
 </div>

@@ -30,3 +30,67 @@
         text-decoration: underline;
     }
 }
+
+.preview-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.text-content {
+    max-height: 55px;
+    font-size: 1em;
+}
+
+.loader {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 50px;
+    
+    img {
+        min-width: 100px;
+        max-width: 100px;
+    }
+}
+
+.featured-resource {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/sky.jpg);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: cover;
+    min-height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    div {
+        background-color: rgba(133,119,110,.7);
+        // height: 2em;
+        // line-height: 2em;
+        width: 100%;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+.class-available {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .q-icon {
+        flex-grow: 0;
+        font-size: 3rem;
+        margin-right: 15px;
+    }
+
+    .text {
+        flex-grow: 1;
+    }
+}

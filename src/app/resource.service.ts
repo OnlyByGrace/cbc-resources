@@ -5,7 +5,7 @@ import { Resource } from './Resource';
 import * as samples from './sample-resources.json';
 import { startWith, distinct, reduce, map, toArray } from 'rxjs/operators';
 
-enum FILTER_TYPES {
+export enum FILTER_TYPES {
   TYPE,
   AUTHOR,
   SERIES,
@@ -279,6 +279,16 @@ export class ResourceService {
             return resource.topic == filter.currentValue.startValue;
           })
           break;
+
+          case FILTER_TYPES.SEARCH:
+            resources = resources.filter((resource) => {
+              return resource.author.indexOf(filter.currentValue.startValue) > -1
+              || resource.title.indexOf(filter.currentValue.startValue) > -1
+              || resource.series.indexOf(filter.currentValue.startValue) > -1
+              || resource.topic.indexOf(filter.currentValue.startValue) > -1
+              || resource.preview.indexOf(filter.currentValue.startValue) > -1;
+            })
+            break;
       }
     }
 
