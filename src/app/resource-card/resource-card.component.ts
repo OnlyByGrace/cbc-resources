@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
-import { EventEmitter } from 'events';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'resource-card',
@@ -10,13 +9,13 @@ export class ResourceCardComponent implements OnInit {
   @Input()
   title: string;
   @Input()
-  type: string;
-  @Input()
   date: string;
   @Input()
   topic: string;
   @Input()
   author: string;
+  @Input()
+  type: string;
 
   constructor() { }
 

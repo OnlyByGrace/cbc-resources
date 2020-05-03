@@ -10,6 +10,6 @@
     <div class="date">{{date}}</div>
     |
     <div class="author">{{author}}</div>
-    |
-    <div class="topic">Topic: {{topic}}</div>
+    <span *ngIf="topic">|</span>
+    <div class="topic" *ngIf="topic">Topic: {{topic}}</div>
 </div>

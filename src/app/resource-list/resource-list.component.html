@@ -1,0 +1,13 @@
+<div class="loader" *ngIf="loading">
+    <img src="/assets/tail-spin.svg" class="loader">
+</div>
+
+<a class="col-xs-12 col-md-6" *ngFor="let resource of resources | async">
+    <resource-card title="{{resource.Title}}" [date]="resource.StartDateTime | date:'longDate'"
+        [topic]="getAttributeValue(resource, 'Topic')" [type]="resource.Embed ? 'Video' : 'Article'" author="{{getAttributeValue(resource, 'Author')}}">
+        <p *ngIf="resource.Embed == null || resource.Embed == ''" class="text-content">{{resource.Preview}}</p>
+        <div class="preview-wrapper" *ngIf="resource.Embed != null && resource.Embed != ''">
+            <img src="{{resource.Thumbnail}}" style="height: 125px;margin-left: auto; margin-right: auto;">
+        </div>
+    </resource-card>
+</a>

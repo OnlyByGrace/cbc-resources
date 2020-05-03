@@ -1,35 +1,55 @@
-import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { StubFilterBar, StubsModule, StubResourceService } from 'src/stubs/stubs.module';
 import { AppComponent } from './app.component';
+import { AppConfigService } from './app.config.service';
+import { ResourceService } from './resource.service';
+
+let sampleFilters = require('./sample-filters.json');
+
+let appConfigService = {
+  getConfig() { return sampleFilters }
+}
 
 describe('AppComponent', () => {
+  let fixture: ComponentFixture<AppComponent>;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        StubsModule
       ],
       declarations: [
         AppComponent
       ],
+      providers: [
+        { provide: AppConfigService, useValue: appConfigService },
+        { provide: ResourceService, useClass: StubResourceService },
+      ]
     }).compileComponents();
   }));
 
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AppComponent);
+  })
+
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'cbc-resources'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('cbc-resources');
+  it('should load possible attribute values into dropdowns via AppConfigService', (done) => {
+    const filterBar = fixture.debugElement.query(By.directive(StubFilterBar));
+    fixture.detectChanges();
+
+    fixture.whenStable().then(() => {
+      expect(filterBar.componentInstance.filters).toEqual(sampleFilters);
+      done();
+    })
+
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('cbc-resources app is running!');
-  });
+  // it should allow ordering by passage
+
+  // it should allow continous scrolling
 });

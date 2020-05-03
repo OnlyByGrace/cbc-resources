@@ -12,8 +12,8 @@
 
     <ng-container *ngIf="!searchMode">
         <div class="dropdown" *ngFor="let filter of filters" [class.active]="filter.active"
-            (click)="toggleFlyout(filter, $event)" attr.data-filter-name="{{filter.name}}">
-            <span class="text">{{ filter.currentValue?.displayName || filter.name }}</span>
+            (click)="toggleFlyout(filter, $event)" attr.data-filter-name="{{filter.Name}}">
+            <span class="text">{{ filter.currentValue?.Display || filter.Name }}</span>
             <span class="glyph fa fa-angle-down"></span>
         </div>
     </ng-container>
@@ -26,7 +26,7 @@
 
 <div class="flyout" #flyOut [class.open]="flyoutOpen">
     <div class="container">
-        <a *ngFor="let term of activeFilter?.possibleValues | async"
-            (click)="valueSelected(activeFilter, term)">{{term.displayName}}</a>
+        <a *ngFor="let term of activeFilter?.possibleAttributeValues"
+            (click)="valueSelected(activeFilter, term)">{{term.Display}}</a>
     </div>
 </div>

@@ -1,8 +1,6 @@
-import { Component, OnInit, ɵLifecycleHooksFeature, Output, EventEmitter, ViewChild, ElementRef, Input } from '@angular/core';
-import { Filter, ResourceService, FilterValue, FilterSet, FILTER_TYPES } from '../resource.service';
-import { Subscription, Observable, Subject, VirtualTimeScheduler } from 'rxjs';
-import { state, style, transition, trigger, animate } from '@angular/animations';
-import { debounceTime } from 'rxjs/operators';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Subject } from 'rxjs';
+import { Filter, FilterSet, FilterValue, ResourceService } from '../resource.service';
 
 @Component({
   selector: 'cbc-filter-bar',
@@ -52,20 +50,20 @@ export class FilterBarComponent implements OnInit {
   constructor(private _resourceService: ResourceService) { }
 
   ngOnInit() {
-    this.searchTerm$.pipe(
-      debounceTime(500)
-    ).subscribe((searchValue) => {
-      if (!this.search) return;
-      this.filtersChanged.emit([{
-        name: "Search",
-        type: FILTER_TYPES.SEARCH,
-        currentValue: {
-          displayName: searchValue,
-          startValue: searchValue,
-        },
-        queryParameter: 'search'
-      }])
-    })
+    // this.searchTerm$.pipe(
+    //   debounceTime(500)
+    // ).subscribe((searchValue) => {
+    //   if (!this.search) return;
+    //   this.filtersChanged.emit([{
+    //     name: "Search",
+    //     type: FILTER_TYPES.SEARCH,
+    //     currentValue: {
+    //       displayName: searchValue,
+    //       startValue: searchValue,
+    //     },
+    //     queryParameter: 'search'
+    //   }])
+    // })
   }
 
   closeFlyout() {
@@ -96,7 +94,7 @@ export class FilterBarComponent implements OnInit {
     if (this.searchMode) {
       this.search.nativeElement.focus();
     } else {
-      this.openFlyout(filter, this.child.nativeElement.querySelector('.dropdown[data-filter-name="' + filter.name + '"]'));
+      // this.openFlyout(filter, this.child.nativeElement.querySelector('.dropdown[data-filter-name="' + filter.name + '"]'));
     }
   }
 
@@ -130,7 +128,7 @@ export class FilterBarComponent implements OnInit {
   }
 
   valueSelected(filter: Filter, value: FilterValue) {
-    if (value.default == true && filter.name != "All Types") {
+    if (value.default == true && filter.Name != "All Types") {
       filter.currentValue = undefined;
     } else {
       filter.currentValue = value;

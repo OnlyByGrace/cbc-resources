@@ -5,44 +5,35 @@
     <div class="filter-descriptions">
       Showing
       <ng-container *ngFor="let filter of activeFilters">
-        <ng-container *ngIf="filter.currentValue" [ngSwitch]="filter.type">
-          <a *ngSwitchCase="0" (click)="filterClicked(filter)"><span class="filter-english">{{filter.currentValue.displayName}}</span></a> <!-- Type -->
-          <a *ngSwitchCase="1" (click)="filterClicked(filter)"> by <span class="filter-english">{{filter.currentValue.displayName}}</span></a> <!-- Author -->
-          <a *ngSwitchCase="2" (click)="filterClicked(filter)"> in <span class="filter-english">{{filter.currentValue.displayName}}</span></a> <!-- Series -->
-          <a *ngSwitchCase="3" (click)="filterClicked(filter)"> from <span class="filter-english">{{filter.currentValue.displayName}}</span></a> <!-- Date -->
-          <a *ngSwitchCase="4" (click)="filterClicked(filter)"> on <span class="filter-english">{{filter.currentValue.displayName}}</span></a> <!-- Scripture -->
-          <a *ngSwitchCase="5" (click)="filterClicked(filter)"> on <span class="filter-english">{{filter.currentValue.displayName}}</span></a> <!-- Topic -->
-          <a *ngSwitchCase="6" (click)="filterClicked(filter)"> results for <span class="filter-english">{{filter.currentValue.displayName}}</span></a> <!-- Search -->
+        <ng-container [ngSwitch]="filter.Name">
+          <a *ngSwitchCase="'Type'" (click)="filterClicked(filter)"><span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Type -->
+          <a *ngSwitchCase="'Author'" (click)="filterClicked(filter)"> by <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Author -->
+          <a *ngSwitchCase="'Series'" (click)="filterClicked(filter)"> in <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Series -->
+          <a *ngSwitchCase="'Date'" (click)="filterClicked(filter)"> from <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Date -->
+          <a *ngSwitchCase="'Scripture'" (click)="filterClicked(filter)"> on <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Scripture -->
+          <a *ngSwitchCase="'Topic'" (click)="filterClicked(filter)"> about <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Topic -->
+          <a *ngSwitchCase="'Search'" (click)="filterClicked(filter)"> results for <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Search -->
+          <a *ngSwitchDefault (click)="filterClicked(filter)"> results for <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Search -->
         </ng-container>
       </ng-container>
     </div>
-    
-    
-    <div class="featured-resource col-xs-12" *ngIf="activeFilters.length == 1 && activeFilters[0].currentValue.displayName == 'All Types'">
+
+
+    <div class="featured-resource col-xs-12" *ngIf="activeFilters.length == 1 && activeFilters[0].currentValue.Display == 'All Types'">
       <div>Featured Resource</div>
     </div>
-  
+
     <div class="class-available col-xs-12" *ngIf="filterTopic()">
-  
+
       <div class="q-icon">
         <span class="far fa-question-circle"></span>
       </div>
       <div class="text">Did you know? We have a Sunday School class studying {{ filterTopic() }}. It meets at 9:00am Sunday mornings in LL - 05.</div>
-  
+
     </div>
-    
-    <div class="loader" *ngIf="loading">
-      <img src="/assets/tail-spin.svg" class="loader">
-    </div>
-  
-    <a class="col-xs-12 col-md-6" *ngFor="let resource of resources">
-      <resource-card title="{{resource.title}}" type="{{resource.type}}" date="{{resource.date | date:'longDate'}}" topic="{{resource.topic}}"
-        author="{{resource.author}}">
-        <p *ngIf="resource.type != 'Video'" class="text-content">{{resource.preview}}</p>
-        <div class="preview-wrapper" *ngIf="resource.type == 'Video'">
-          <img src="/assets/vid.png" style="height: 125px;margin-left: auto; margin-right: auto;">
-        </div>
-      </resource-card>
-    </a>
-  
+
+    <resource-list [filters]='filters'>
+
+    </resource-list>
+
   </div>

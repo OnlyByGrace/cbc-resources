@@ -1,0 +1,474 @@
+[
+    {
+        "Id": 4838,
+        "Name": "Topic",
+        "possibleAttributeValues": [
+            {
+                "Value": "c4ce359a-c791-4188-898c-9b66fbc11edb",
+                "Display": "Christian Living"
+            },
+            {
+                "Value": "95946564-dce9-4aac-b334-867584304a4a",
+                "Display": "How to Study the Bible"
+            }
+        ]
+    },
+    {
+        "Id": 4839,
+        "Name": "Scripture",
+        "possibleAttributeValues": [
+            {
+                "Value": "Genesis",
+                "Display": "Genesis"
+            },
+            {
+                "Value": "Exodus",
+                "Display": "Exodus"
+            },
+            {
+                "Value": "Leviticus",
+                "Display": "Leviticus"
+            },
+            {
+                "Value": "Deuteronomy",
+                "Display": "Deuteronomy"
+            },
+            {
+                "Value": "Joshua",
+                "Display": "Joshua"
+            },
+            {
+                "Value": "Judges",
+                "Display": "Judges"
+            },
+            {
+                "Value": "Ruth",
+                "Display": "Ruth"
+            },
+            {
+                "Value": "1 Samuel",
+                "Display": "1 Samuel"
+            },
+            {
+                "Value": "2 Samuel",
+                "Display": "2 Samuel"
+            },
+            {
+                "Value": "1 Kings",
+                "Display": "1 Kings"
+            },
+            {
+                "Value": "Ezra",
+                "Display": "Ezra"
+            },
+            {
+                "Value": "Job",
+                "Display": "Job"
+            },
+            {
+                "Value": "Psalms",
+                "Display": "Psalms"
+            },
+            {
+                "Value": "Proverbs",
+                "Display": "Proverbs"
+            },
+            {
+                "Value": "Ecclesiastes",
+                "Display": "Ecclesiastes"
+            },
+            {
+                "Value": "Song of Solomon",
+                "Display": "Song of Solomon"
+            },
+            {
+                "Value": "Isaiah",
+                "Display": "Isaiah"
+            },
+            {
+                "Value": "Jeremiah",
+                "Display": "Jeremiah"
+            },
+            {
+                "Value": "Ezekiel",
+                "Display": "Ezekiel"
+            },
+            {
+                "Value": "Daniel",
+                "Display": "Daniel"
+            },
+            {
+                "Value": "Hosea",
+                "Display": "Hosea"
+            },
+            {
+                "Value": "Joel",
+                "Display": "Joel"
+            },
+            {
+                "Value": "Amos",
+                "Display": "Amos"
+            },
+            {
+                "Value": "Obadiah",
+                "Display": "Obadiah"
+            },
+            {
+                "Value": "Jonah",
+                "Display": "Jonah"
+            },
+            {
+                "Value": "Micah",
+                "Display": "Micah"
+            },
+            {
+                "Value": "Nahum",
+                "Display": "Nahum"
+            },
+            {
+                "Value": "Habakkuk",
+                "Display": "Habakkuk"
+            },
+            {
+                "Value": "Malachi",
+                "Display": "Malachi"
+            },
+            {
+                "Value": "Matthew",
+                "Display": "Matthew"
+            },
+            {
+                "Value": "Mark",
+                "Display": "Mark"
+            },
+            {
+                "Value": "Luke",
+                "Display": "Luke"
+            },
+            {
+                "Value": "John",
+                "Display": "John"
+            },
+            {
+                "Value": "Acts",
+                "Display": "Acts"
+            },
+            {
+                "Value": "Romans",
+                "Display": "Romans"
+            },
+            {
+                "Value": "1 Corinthians",
+                "Display": "1 Corinthians"
+            },
+            {
+                "Value": "Galatians",
+                "Display": "Galatians"
+            },
+            {
+                "Value": "Ephesians",
+                "Display": "Ephesians"
+            },
+            {
+                "Value": "Philippians",
+                "Display": "Philippians"
+            },
+            {
+                "Value": "Colossians",
+                "Display": "Colossians"
+            },
+            {
+                "Value": "1 Thessalonians",
+                "Display": "1 Thessalonians"
+            },
+            {
+                "Value": "2 Thessalonians",
+                "Display": "2 Thessalonians"
+            },
+            {
+                "Value": "1 Timothy",
+                "Display": "1 Timothy"
+            },
+            {
+                "Value": "Hebrews",
+                "Display": "Hebrews"
+            },
+            {
+                "Value": "James",
+                "Display": "James"
+            },
+            {
+                "Value": "1 Peter",
+                "Display": "1 Peter"
+            },
+            {
+                "Value": "2 Peter",
+                "Display": "2 Peter"
+            },
+            {
+                "Value": "1 John",
+                "Display": "1 John"
+            },
+            {
+                "Value": "Jude",
+                "Display": "Jude"
+            },
+            {
+                "Value": "Revelation",
+                "Display": "Revelation"
+            }
+        ]
+    },
+    {
+        "Id": 4840,
+        "Name": "Series",
+        "possibleAttributeValues": [
+            {
+                "Value": "dcca448f-08c4-4c1a-86ad-96cf4b4ea68c",
+                "Display": "Lights in the Darkness"
+            },
+            {
+                "Value": "dcca448f-08c4-4c1a-86ad-96cf4b4ea68c",
+                "Display": "Lights in the Darkness"
+            },
+            {
+                "Value": "9a32106f-f974-4543-9e5c-8de026192278",
+                "Display": "We Need A Shepherd"
+            },
+            {
+                "Value": "1591b40b-3e4f-4ea7-a7b2-031e728f00cb",
+                "Display": "Follow Jesus"
+            },
+            {
+                "Value": "22202309-ee20-439d-af3c-767c52292cde",
+                "Display": "Christmas/Easter"
+            },
+            {
+                "Value": "09f72264-09a4-42b0-b556-fb66c92978e6",
+                "Display": "Guest Speakers"
+            },
+            {
+                "Value": "a5c7fde9-51fa-4df5-a393-0eb0803beef0",
+                "Display": "Just As Promised"
+            },
+            {
+                "Value": "eeae84a9-a4a7-4127-8605-bfca4d54a066",
+                "Display": "A Study of Genesis"
+            },
+            {
+                "Value": "9c36d8de-5115-4fb9-9d9c-4ec057eac879",
+                "Display": "Discipleship in the Home"
+            },
+            {
+                "Value": "3ee099e0-76e7-40df-a44a-d7c7f2c4878c",
+                "Display": "Busted"
+            },
+            {
+                "Value": "83a7d2d7-ddd4-48ad-8567-12b50e781261",
+                "Display": "What It Means to be a Church, .. a Christian"
+            },
+            {
+                "Value": "a06ca23b-0a5d-4553-8a2f-b8625936e20a",
+                "Display": "Living in the Light - Gospel of John"
+            },
+            {
+                "Value": "49bb5f6f-372a-4231-9e83-efd9d128c4c8",
+                "Display": "Relevant Topics"
+            },
+            {
+                "Value": "c1143c91-884f-48ef-aa3d-bc562b828eba",
+                "Display": "Know What You Believe & Why"
+            },
+            {
+                "Value": "a34503b1-b1bb-4309-a4a5-3d0d6b5cef08",
+                "Display": "DOUBT"
+            },
+            {
+                "Value": "3e11c1b1-4a70-4baf-923f-27ac51d30abf",
+                "Display": "Misc"
+            },
+            {
+                "Value": "fbc24c5e-ce2e-49f4-9e06-b5380ea9ed08",
+                "Display": "Relevant Video Resources"
+            },
+            {
+                "Value": "5ecbbfe0-d891-4e85-b45b-e8829bf45098",
+                "Display": "Loving, Growing, Sending"
+            },
+            {
+                "Value": "2faddbe6-ed29-4188-93f4-9285f7a19408",
+                "Display": "Study of Colossians"
+            },
+            {
+                "Value": "4c9a3115-f295-49a5-8f7c-097be8c24337",
+                "Display": "The Gospel of Acts"
+            },
+            {
+                "Value": "799c8509-99b2-4065-a763-613cf6744cf3",
+                "Display": "Step by Step with Jesus"
+            },
+            {
+                "Value": "b59efbf7-e23d-4997-b33e-b89a37a00d61",
+                "Display": "Parenting (for Women)"
+            },
+            {
+                "Value": "e7c9cfa7-bec9-4059-a5d2-fdeff0a83d7c",
+                "Display": "Pursuing God\\'s Heart"
+            },
+            {
+                "Value": "1b33932a-d2b7-49a7-bea5-5039136ae38f",
+                "Display": "The Church"
+            },
+            {
+                "Value": "641bc92b-38c6-4757-84b2-aa9a9a412bfa",
+                "Display": "Godly Living in Ungodly Times"
+            },
+            {
+                "Value": "04d9bcba-18a7-450c-b96b-76e11bf04e2f",
+                "Display": "Raising Godly Children in an Ungodly World"
+            },
+            {
+                "Value": "36af9ed3-5252-4ea9-870c-e2eaf0dbb8dc",
+                "Display": "Advent"
+            },
+            {
+                "Value": "4d22e0df-9a7e-4171-b916-2e2ecc93fa45",
+                "Display": "Gospel Conversations"
+            },
+            {
+                "Value": "cd317c8e-c83f-449e-872b-ff0d2a55b836",
+                "Display": "The Suffering Servant"
+            },
+            {
+                "Value": "cd317c8e-c83f-449e-872b-ff0d2a55b836",
+                "Display": "The Suffering Servant"
+            },
+            {
+                "Value": "09e59aa4-ca25-4940-9e5f-a917bdbe1e1f",
+                "Display": "1 Peter"
+            },
+            {
+                "Value": "ebc8e1cf-25d6-48c4-947a-bb077a0436a5",
+                "Display": "2000 Years of Christ\\'s Power: Extending the Reformation"
+            },
+            {
+                "Value": "6b95ccbf-01e6-4701-87a6-0424b11b430c",
+                "Display": "Who is this Jesus?"
+            },
+            {
+                "Value": "9b0c5e48-3c72-4edb-bf26-4fde0dc9880c",
+                "Display": "What the Lord Requires of Us"
+            },
+            {
+                "Value": "ba1602d4-0046-443e-bfa5-6abbfc4ab8ce",
+                "Display": "The Road to Resurrection"
+            },
+            {
+                "Value": "b2afe8d6-8367-418f-b5a7-ab658bf86589",
+                "Display": "Prayer"
+            },
+            {
+                "Value": "0fbf87f1-9963-444b-8056-7777ed6f4bd7",
+                "Display": "Psalms"
+            },
+            {
+                "Value": "0fbf87f1-9963-444b-8056-7777ed6f4bd7",
+                "Display": "Psalms"
+            },
+            {
+                "Value": "b2afc032-1218-4fa5-8ac4-0a3afbeb2fb7",
+                "Display": "Super Sunday School 2019"
+            },
+            {
+                "Value": "49954932-1c90-450c-8bbc-cfe004b18f31",
+                "Display": "Launching the Church"
+            },
+            {
+                "Value": "ef5985c3-3213-44ce-ae00-329d32903079",
+                "Display": "Advent 2019"
+            },
+            {
+                "Value": "dc02fc05-5522-4c64-ab71-b5f8526ea28d",
+                "Display": "Galatians"
+            },
+            {
+                "Value": "dc02fc05-5522-4c64-ab71-b5f8526ea28d",
+                "Display": "Galatians"
+            }
+        ]
+    },
+    {
+        "Id": 5233,
+        "Name": "Author",
+        "possibleAttributeValues": [
+            {
+                "Value": "43be8683-b9e4-48a3-8952-783a96afb985",
+                "Display": "Allan Moseley"
+            },
+            {
+                "Value": "6de12871-39f5-4665-bcd9-456d6dda0e83",
+                "Display": "Keith Harper"
+            },
+            {
+                "Value": "d62a7697-d1a3-43cc-ac60-1bedaa56a196",
+                "Display": "Andy Duke"
+            },
+            {
+                "Value": "364994cf-840d-4619-9031-427994850d4b",
+                "Display": "Sarah Knott"
+            },
+            {
+                "Value": "9a6288f6-39c0-4927-834a-515a91558367",
+                "Display": "David Hogg"
+            },
+            {
+                "Value": "46b45850-6e83-43de-ad87-3a981b6ba062",
+                "Display": "Fayeson Tilley"
+            },
+            {
+                "Value": "577c50a0-93aa-4407-a082-16ebba2f79ba",
+                "Display": "Luke Bennett"
+            },
+            {
+                "Value": "4281e084-4d0b-4f17-98e4-0a7f0641440d",
+                "Display": "Robert Smith"
+            },
+            {
+                "Value": "e3ea377f-8bed-4621-bc8b-5a90ac258986",
+                "Display": "Nathan Tarr"
+            },
+            {
+                "Value": "51319729-69b0-4521-9e72-1d6bad223c55",
+                "Display": "Kevin Ezell"
+            },
+            {
+                "Value": "67413dda-4a83-42f0-b5fc-1affc9449612",
+                "Display": "Seth Postell"
+            },
+            {
+                "Value": "2127c4af-5aa5-476c-8323-3fa41070d888",
+                "Display": "Brad Creed"
+            },
+            {
+                "Value": "2546900d-f3ab-48f1-969f-33b36b4464cb",
+                "Display": "Nathan Finn"
+            },
+            {
+                "Value": "cf079601-7c96-4b5d-9009-08b3eb34edc8",
+                "Display": "Brian Williams"
+            },
+            {
+                "Value": "ca15b898-1f06-4d65-b10c-454b67c177c7",
+                "Display": "Joe Knott"
+            },
+            {
+                "Value": "36d48c55-0e32-4b9e-a0e7-b2a57000a205",
+                "Display": "Jeff Baxley"
+            },
+            {
+                "Value": "75732e12-419e-4782-9ccc-4c8529b21b82",
+                "Display": "Craig George"
+            }
+        ]
+    }
+]

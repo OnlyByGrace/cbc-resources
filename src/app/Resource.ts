@@ -1,10 +1,12 @@
 export class Resource {
-    title: string;
-    preview: string;
-    author: string;
-    date: string;
-    topic: string;
-    type: string;
-    series: string;
-    scripture: string;
+    Id: number;
+    Title: string;
+    Preview: string;
+    StartDateTime: string;
+    Author: string;
+    Embed: string;
+    Scripture: string;
+    Topic: string;
+    Series: string;
+    Thumbnail: string;
 }

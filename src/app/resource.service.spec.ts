@@ -1,16 +1,90 @@
 import { TestBed } from '@angular/core/testing';
 
 import { ResourceService } from './resource.service';
+import { Resource } from './Resource';
+import { from } from 'rxjs';
+
+import { environment } from '../environments/environment';
+
+let sampleResources = require('./sample-resources.json');
 
 describe('ResourceService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let mockHttpClient: { get: jasmine.Spy };
+  let resourceService: ResourceService;
 
-  it('should be created', () => {
-    const service: ResourceService = TestBed.get(ResourceService);
-    expect(service).toBeTruthy();
+  beforeEach(() => {
+    mockHttpClient = jasmine.createSpyObj('HttpClient', ['get']);
+
+    resourceService = new ResourceService(<any>mockHttpClient);
   });
 
-  it('should return an observable of resources from a FilterSet', () => {
-    expect(true).toBeFalsy();
+  it('should be created', () => {
+    expect(resourceService).toBeTruthy();
+  });
+
+  // it('should return an observable of resources from a FilterSet', () => {
+  //   expect(true).toBeFalsy();
+  // });
+
+
+  describe('getResources', () => {
+    it('should call get', (done) => {
+      mockHttpClient.get.and.returnValue(from([sampleResources]));
+
+      resourceService.getResources([
+        {
+          Id: 1,
+          Name: 'Author',
+          currentValue: {
+            Value: '1',
+            Display: 'John Doe'
+          }
+        }
+      ]).subscribe((resources) => {
+        expect(mockHttpClient.get).toHaveBeenCalled();
+        expect(resources).toBe(sampleResources);
+        done();
+      })
+    });
+
+    it('should call get with the environment server URL', (done) => {
+      mockHttpClient.get.and.returnValue(from([sampleResources]));
+
+      resourceService.getResources([]).subscribe((resources) => {
+        expect(mockHttpClient.get).toHaveBeenCalledWith(environment.serverUrl + environment.resourceUrl, { params: {} });
+        expect(resources).toBe(sampleResources);
+        done();
+      })
+    });
+
+    it('should convert filter with a value selected to URL parameters', () => {
+      mockHttpClient.get.and.returnValue(from([sampleResources]));
+
+      resourceService.getResources([
+        {
+          Id: 1,
+          Name: 'Author',
+          currentValue: {
+            Value: 'value-of-author',
+            Display: 'John Doe'
+          }
+        },
+        {
+          Id: 2,
+          Name: 'Passage',
+          currentValue: {
+            Value: 'value-of-passage',
+            Display: 'Genesis'
+          }
+        },
+        {
+          Id: 3,
+          Name: 'Series'
+        }
+      ]).subscribe((resources) => {
+        expect(mockHttpClient.get).toHaveBeenCalledWith(environment.serverUrl+environment.resourceUrl, { params: { '1' : 'value-of-author', '2' : 'value-of-passage' } });
+        expect(resources).toBe(sampleResources);
+      })
+    });
   });
 });

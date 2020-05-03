@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FilterBarComponent } from './filter-bar.component';
+import { ResourceService } from '../resource.service';
+import { StubResourceService } from 'src/stubs/stubs.module';
 
 describe('FilterBarComponent', () => {
   let component: FilterBarComponent;
@@ -8,6 +10,7 @@ describe('FilterBarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      providers: [{provide: ResourceService, useClass: StubResourceService }],
       declarations: [ FilterBarComponent ]
     })
     .compileComponents();
@@ -22,4 +25,10 @@ describe('FilterBarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it should display filters with possible values
+
+  // it should insert an "all" possible value with the correct pluralized form of each filter
+
+  
 });
