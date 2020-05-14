@@ -235,7 +235,7 @@ export class ResourceService {
   getResources(filterSet: FilterSet): Observable<Resource[]> {
 
     let filterParams = filterSet.filter(filter => filter.currentValue != null).reduce((params, filter) => {
-        params[filter.Id] = filter.currentValue.Value;
+        if (filter.currentValue.Value != null) params[filter.Id] = filter.currentValue.Value;
         return params;
     }, {});
 

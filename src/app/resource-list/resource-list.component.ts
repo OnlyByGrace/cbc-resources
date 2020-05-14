@@ -31,6 +31,10 @@ export class ResourceListComponent implements OnInit {
       
   }
 
+  openCard(resource: Resource) {
+    document.location = "http://localhost:58469/resources/" + resource.Id;
+  }
+
   getAttributeValue(resource: Resource, attributeName: string): string {
     if (!resource[attributeName]) return '';
 
