@@ -4,9 +4,12 @@ export class Resource {
     Preview: string;
     StartDateTime: string;
     Author: string;
-    Embed: string;
     Scripture: string;
     Topic: string;
     Series: string;
     Thumbnail: string;
+
+    AudioAvailable: number;
+    VideoAvailable: number;
+    TextAvailable: number;
 }

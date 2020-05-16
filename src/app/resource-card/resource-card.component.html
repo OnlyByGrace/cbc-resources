@@ -1,15 +1,33 @@
-<div class="title">{{title}}</div>
 
-<div class="type">{{type}}</div>
-
-<div class="content">
-    <ng-content></ng-content>
+<div class="card-header">
+    <div class="title">{{ resource.Title }}</div>
+    <div class="type">
+        <i *ngIf="resource.VideoAvailable" class='fa fa-video'></i>
+        <i *ngIf="resource.AudioAvailable" class='fa fa-headphones'></i>
+        <i *ngIf="resource.TextAvailable" class='fa fa-newspaper'></i>
+    </div>
 </div>
 
-<div class="card-footer">    
-    <div class="date">{{date}}</div>
-    |
-    <div class="author">{{author}}</div>
-    <span *ngIf="topic">|</span>
-    <div class="topic" *ngIf="topic">Topic: {{topic}}</div>
+<div class="tagline">
+    <div class="date">{{resource.StartDateTime | date:'longDate'}}</div>
+    by 
+    <div class="author">{{getAttributeDisplayValue(resource, 'Author')}}</div>
+</div>
+
+<div class="content">
+    <p *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 0" class="text-content">{{resource.Preview | striphtml}}
+    </p>
+    <div class="preview-wrapper" *ngIf="resource.VideoAvailable == 1">
+        <img src="{{resource.Thumbnail}}" style="width: 100%;margin-left: auto; margin-right: auto;">
+    </div>
+</div>
+
+<div class="card-footer">
+    <!-- <ng-container *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
+        <div class="scripture" *ngIf="resource.Scripture">{{resource.Scripture}}</div>
+        <div class="topic" *ngIf="resource.Topic">{{getAttributeDisplayValue(resource, 'Topic')}}</div>
+    <!-- </ng-container> -->
+
+    <p *ngIf="!resource.Scripture && !resource.Topic && (resource.VideoAvailable == 1 || resource.AudioAvailable == 1)" class="text-content">{{resource.Preview | striphtml}}
+    </p>
 </div>

@@ -30,20 +30,4 @@ export class ResourceListComponent implements OnInit {
   ngOnInit() {
       
   }
-
-  openCard(resource: Resource) {
-    document.location = "http://localhost:58469/resources/" + resource.Id;
-  }
-
-  getAttributeValue(resource: Resource, attributeName: string): string {
-    if (!resource[attributeName]) return '';
-
-    let multiSelectValues = resource[attributeName].split(',');
-    let attribute = this._filters
-        .find((filter) => filter.Name == attributeName)
-        .possibleAttributeValues
-        .filter(av => multiSelectValues.some((msv) => av.Value == msv.toLowerCase().replace(/[{}]/g,"")));
-
-    return attribute ? attribute.map((a) => a.Display).join(', ') : resource[attributeName];
-  }
 }

@@ -1,4 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Resource } from '../Resource';
+import { AppConfigService } from '../app.config.service';
 
 @Component({
   selector: 'resource-card',
@@ -7,19 +9,14 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ResourceCardComponent implements OnInit {
   @Input()
-  title: string;
-  @Input()
-  date: string;
-  @Input()
-  topic: string;
-  @Input()
-  author: string;
-  @Input()
-  type: string;
+  resource: Resource;
 
-  constructor() { }
+  constructor(private _appConfigService: AppConfigService) { }
 
   ngOnInit() {
   }
 
+  getAttributeDisplayValue(resource: Resource, attributeName: string) {
+    return this._appConfigService.getAttributeDisplayValue(resource, attributeName);
+  }
 }

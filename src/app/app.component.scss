@@ -1,5 +1,5 @@
 :host {
-    background-color: #E6E6E6;
+    background-color: #f7f7f7;
 }
 
 .body {
@@ -28,17 +28,14 @@
     span.filter-english {
         color: #999999;
         text-decoration: underline;
+        cursor: pointer;
     }
 }
 
 .preview-wrapper {
     width: 100%;
+    overflow: hidden;
     text-align: center;
-}
-
-.text-content {
-    max-height: 55px;
-    font-size: 1em;
 }
 
 .loader {

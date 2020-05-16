@@ -94,7 +94,7 @@ export class FilterBarComponent implements OnInit {
     if (this.searchMode) {
       this.search.nativeElement.focus();
     } else {
-      // this.openFlyout(filter, this.child.nativeElement.querySelector('.dropdown[data-filter-name="' + filter.name + '"]'));
+      this.openFlyout(filter, this.child.nativeElement.querySelector('.dropdown[data-filter-name="' + filter.Name + '"]'));
     }
   }
 

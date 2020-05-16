@@ -8,6 +8,7 @@ import { FilterBarComponent } from './filter-bar/filter-bar.component';
 import { ResourceCardComponent } from './resource-card/resource-card.component';
 import { ResourceListComponent } from './resource-list/resource-list.component';
 import { ResourceComponent } from './resource/resource.component';
+import { StripHtmlPipe } from './strip-html.pipe';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ResourceComponent } from './resource/resource.component';
     FilterBarComponent,
     ResourceListComponent,
     ResourceCardComponent,
-    ResourceComponent
+    ResourceComponent,
+    StripHtmlPipe
   ],
   imports: [
     BrowserModule,
