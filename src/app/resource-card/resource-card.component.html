@@ -15,8 +15,11 @@
 </div>
 
 <div class="content">
-    <p *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 0" class="text-content">{{resource.Preview | striphtml}}
+    <p *ngIf="resource.VideoAvailable == 0" class="text-content">{{resource.Preview | striphtml}}
     </p>
+
+    <p *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 1 && resource.Preview == ''" class="audio-preview"><i class="fa fa-headphones"></i></p>
+
     <div class="preview-wrapper" *ngIf="resource.VideoAvailable == 1">
         <img src="{{resource.Thumbnail}}" style="width: 100%;margin-left: auto; margin-right: auto;">
     </div>

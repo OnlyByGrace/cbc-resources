@@ -232,12 +232,16 @@ export class ResourceService {
 
   constructor(private _httpClient: HttpClient) { }
 
-  getResources(filterSet: FilterSet): Observable<Resource[]> {
-
+  getResources(filterSet: FilterSet, page?: number): Observable<Resource[]> {
+    if (!filterSet) return null;
     let filterParams = filterSet.filter(filter => filter.currentValue != null).reduce((params, filter) => {
         if (filter.currentValue.Value != null) params[filter.Id] = filter.currentValue.Value;
         return params;
     }, {});
+
+    if (page) {
+      filterParams['Page'] = page;
+    }
 
     return this._httpClient.get<Resource[]>(environment.serverUrl + environment.resourceUrl, {
       params: filterParams

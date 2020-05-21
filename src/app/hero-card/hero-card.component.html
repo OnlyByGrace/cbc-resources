@@ -1,0 +1,22 @@
+<div class="details">
+    <h3>Latest Sermon</h3>
+    <div class="title">
+        {{ resource.Title }}
+
+        <div class="tagline">
+            <div class="date">{{resource.StartDateTime | date:'longDate'}}</div>
+            by
+            <div class="author">{{getAttributeDisplayValue(resource, 'Author')}}</div>
+        </div>
+    </div>
+
+    <div class="description">
+        {{ resource.Preview | striphtml }}
+    </div>
+</div>
+
+<div class="preview">
+    <div class="preview-wrapper" *ngIf="resource.VideoAvailable == 1">
+        <img src="{{resource.Thumbnail}}">
+    </div>
+</div>

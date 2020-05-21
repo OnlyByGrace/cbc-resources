@@ -9,6 +9,7 @@ import { ResourceCardComponent } from './resource-card/resource-card.component';
 import { ResourceListComponent } from './resource-list/resource-list.component';
 import { ResourceComponent } from './resource/resource.component';
 import { StripHtmlPipe } from './strip-html.pipe';
+import { HeroCardComponent } from './hero-card/hero-card.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { StripHtmlPipe } from './strip-html.pipe';
     ResourceListComponent,
     ResourceCardComponent,
     ResourceComponent,
-    StripHtmlPipe
+    StripHtmlPipe,
+    HeroCardComponent
   ],
   imports: [
     BrowserModule,

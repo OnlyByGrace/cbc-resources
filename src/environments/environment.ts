@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serverUrl: 'http://localhost:58469',
+  serverUrl: '/api',
   resourceUrl: '/Webhooks/Lava.ashx/resources/query'
 };
 

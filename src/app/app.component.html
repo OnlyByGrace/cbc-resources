@@ -1,39 +1,61 @@
-<cbc-filter-bar (flyoutOpened)="flyoutOpened()" [filters]="filters" (flyoutClosed)="flyoutClosed()" (filtersChanged)="fetchResources($event)"></cbc-filter-bar>
+<cbc-filter-bar (flyoutOpened)="flyoutOpened()" [filters]="filters" (flyoutClosed)="flyoutClosed()"
+  (filtersChanged)="filtersChanged($event)"></cbc-filter-bar>
 
 <div class="body container" [class.blurred]="flyoutOpen">
 
-    <div class="filter-descriptions">
-      Showing
-      <ng-container *ngFor="let filter of activeFilters">
-        <ng-container [ngSwitch]="filter.Name">
-          <a *ngSwitchCase="'Type'" (click)="filterClicked(filter)"><span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Type -->
-          <a *ngSwitchCase="'Author'" (click)="filterClicked(filter)"> by <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Author -->
-          <a *ngSwitchCase="'Series'" (click)="filterClicked(filter)"> in <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Series -->
-          <a *ngSwitchCase="'Date'" (click)="filterClicked(filter)"> from <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Date -->
-          <a *ngSwitchCase="'Scripture'" (click)="filterClicked(filter)"> on <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Scripture -->
-          <a *ngSwitchCase="'Topic'" (click)="filterClicked(filter)"> about <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Topic -->
-          <a *ngSwitchCase="'Search'" (click)="filterClicked(filter)"> results for <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Search -->
-          <a *ngSwitchDefault (click)="filterClicked(filter)"> results for <span class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Search -->
-        </ng-container>
+  <div class="filter-descriptions" *ngIf="activeFilters">
+    Showing
+    <ng-container *ngFor="let filter of activeFilters">
+      <ng-container [ngSwitch]="filter.Name">
+        <a *ngSwitchCase="'Type'" (click)="filterClicked(filter)"><span
+            class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Type -->
+        <a *ngSwitchCase="'Author'" (click)="filterClicked(filter)"> by <span
+            class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Author -->
+        <a *ngSwitchCase="'Series'" (click)="filterClicked(filter)"> in <span
+            class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Series -->
+        <a *ngSwitchCase="'Date'" (click)="filterClicked(filter)"> from <span
+            class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Date -->
+        <a *ngSwitchCase="'Scripture'" (click)="filterClicked(filter)"> on <span
+            class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Scripture -->
+        <a *ngSwitchCase="'Topic'" (click)="filterClicked(filter)"> about <span
+            class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Topic -->
+        <a *ngSwitchCase="'Search'" (click)="filterClicked(filter)"> results for <span
+            class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Search -->
+        <a *ngSwitchDefault (click)="filterClicked(filter)"> results for <span
+            class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Search -->
       </ng-container>
+    </ng-container>
+  </div>
+
+
+  <a href="/resources/{{latestSermon.Id}}" *ngIf="latestSermon && activeFilters && activeFilters.length == 1 && activeFilters[0].currentValue.Display == 'All Types'">
+  <hero-card [resource]="latestSermon">
+  </hero-card>
+  </a>
+
+  <div class="class-available col-xs-12" *ngIf="filterTopic()">
+
+    <div class="q-icon">
+      <span class="far fa-question-circle"></span>
     </div>
-
-
-    <div class="featured-resource col-xs-12" *ngIf="activeFilters.length == 1 && activeFilters[0].currentValue.Display == 'All Types'">
-      <div>Featured Resource</div>
-    </div>
-
-    <div class="class-available col-xs-12" *ngIf="filterTopic()">
-
-      <div class="q-icon">
-        <span class="far fa-question-circle"></span>
-      </div>
-      <div class="text">Did you know? We have a Sunday School class studying {{ filterTopic() }}. It meets at 9:00am Sunday mornings in LL - 05.</div>
-
-    </div>
-
-    <resource-list [filters]='activeFilters'>
-
-    </resource-list>
+    <div class="text">Did you know? We have a Sunday School class studying {{ filterTopic() }}. It meets at 9:00am
+      Sunday mornings in LL - 05.</div>
 
   </div>
+
+  <resource-list [resources]='resourceStream'>
+
+  </resource-list>
+
+  <div class="loader" *ngIf="loading"><img src="/assets/tail-spin.svg" /></div>
+
+  <div class="row">
+    <div class="col-xs-12" style="text-align: center; margin-bottom: 20px;" *ngIf="!loading && !endOfResults">
+      <div class="btn btn-default" style="clear: both;" (click)="loadNextPage()">Load more</div>
+    </div>
+    <div class="col-xs-12" style="text-align: center; margin-bottom: 20px;" *ngIf="endOfResults">
+      <div style="clear: both;">End of Results</div>
+    </div>
+  </div>
+
+</div>
