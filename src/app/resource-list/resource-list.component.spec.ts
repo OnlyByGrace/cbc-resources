@@ -1,16 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { from, Observable } from 'rxjs';
-import { StubsModule, StubResourceService } from 'src/stubs/stubs.module';
+import { StubsModule, StubResourceService, StubResourceCard } from 'src/stubs/stubs.module';
 import { Resource } from '../Resource';
-import { ResourceService } from '../resource.service';
+import { ResourceService, FilterSet } from '../resource.service';
 import { ResourceListComponent } from './resource-list.component';
+import { Component, ViewChild } from '@angular/core';
 
 let sampleFilters = require('../sample-filters.json');
 
 let resourceServiceStub = new StubResourceService();
-resourceServiceStub.getResources = function () {
-  return from([[{
+resourceServiceStub.getResources = function (filterSet: FilterSet) {
+  return from([[<Resource>{
     Id: 1,
+    Type: 10,
     Title: '2',
     Preview: 'Test Element',
     StartDateTime: '1',
@@ -19,31 +21,60 @@ resourceServiceStub.getResources = function () {
     Scripture: '',
     Topic: '',
     Series: '',
-    Thumbnail: ''
+    Thumbnail: '',
+    AudioAvailable: 0,
+    TextAvailable: 0,
+    VideoAvailable: 0
   }]]);
+}
+
+@Component({
+  template: '<resource-list [resources]="sampleResources"></resource-list>',
+  selector: 'resource-list-wrapper'
+})
+class ResourceListWrapper {
+  sampleResources: Observable<Resource[]> = from([[<Resource>{
+    Id: 1,
+    Type: 10,
+    Title: '2',
+    Preview: 'Test Element',
+    StartDateTime: '1',
+    Author: '9a6288f6-39c0-4927-834a-515a91558367',
+    Embed: '',
+    Scripture: '',
+    Topic: '',
+    Series: '',
+    Thumbnail: '',
+    AudioAvailable: 0,
+    TextAvailable: 0,
+    VideoAvailable: 0
+  }]]);
+
+  @ViewChild(ResourceListComponent, { static: true })
+  resourceList: ResourceListComponent;
+
+  constructor() { }
 }
 
 describe('ResourceListComponent', () => {
   let component: ResourceListComponent;
-  let fixture: ComponentFixture<ResourceListComponent>;
+  let fixture: ComponentFixture<ResourceListWrapper>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        StubsModule
       ],
       providers: [
-        { provide: ResourceService, useValue: resourceServiceStub }
+          
       ],
-      declarations: [ResourceListComponent]
+      declarations: [ResourceListWrapper, ResourceListComponent, StubResourceCard]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ResourceListComponent);
-    component = fixture.componentInstance;
-    component.filters = sampleFilters;
+    fixture = TestBed.createComponent(ResourceListWrapper);
+    component = fixture.componentInstance.resourceList;
   });
 
   it('should create', () => {
@@ -51,46 +82,7 @@ describe('ResourceListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should pull latest 20 resources sorted by date', () => {
-    let resourceService = TestBed.get(ResourceService);
-    spyOn(resourceService, 'getResources').and.callThrough();
-
-    console.log('calling');
-    fixture.detectChanges();
-    component.filters = sampleFilters;
-    expect(component.filters).toEqual(sampleFilters);
-
-    expect(resourceService.getResources).toHaveBeenCalled();
-    console.log(fixture.nativeElement.textContent);
-    expect(fixture.nativeElement.textContent).toContain('Test Element');
-  })
-
-  describe('getAttributeValue', () => {
-    it('should ignore empty values', () => {
-      let value: string = component.getAttributeValue(<any>{
-        Name: 'Test',
-        Author: '9a6288f6-39c0-4927-834a-515a91558367'
-      }, 'Authoasdfasdr');
-
-      expect(value).toBe('');
-    });
-
-    it('should return the correct display value for an attribute value', () => {
-      let value: string = component.getAttributeValue(<any>{
-        Name: 'Test',
-        Author: '9a6288f6-39c0-4927-834a-515a91558367'
-      }, 'Author');
-
-      expect(value).toBe('David Hogg');
-    });
-
-    it('should accept comma separated values', () => {
-      let value: string = component.getAttributeValue(<any>{
-        Name: 'Test',
-        Author: '9a6288f6-39c0-4927-834a-515a91558367,577c50a0-93aa-4407-a082-16ebba2f79ba'
-      }, 'Author');
-
-      expect(value).toBe('David Hogg, Luke Bennett');
-    });
+  it('should show a resource card for each resource in the observable', () => {
+    
   })
 });

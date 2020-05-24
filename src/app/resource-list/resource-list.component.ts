@@ -12,7 +12,7 @@ export class ResourceListComponent implements OnInit {
   @Input()
   resources: Observable<Resource[]>;
 
-  constructor(private _resourceService: ResourceService, private _cd: ChangeDetectorRef) { }
+  constructor() { }
 
   ngOnInit() {
       

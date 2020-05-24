@@ -4,7 +4,8 @@ import { FilterBarComponent } from './filter-bar/filter-bar.component';
 import { Filter, FilterSet, ResourceService } from './resource.service';
 import { Resource } from './Resource';
 import { Observable, Subject, fromEvent, from, throwError } from 'rxjs';
-import { concatMap, debounceTime, startWith, scan, switchMap, tap, take } from 'rxjs/operators';
+import { concatMap, debounceTime, startWith, scan, switchMap, tap, take, map, reduce } from 'rxjs/operators';
+import { Carousel } from './Carousel';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,8 @@ export class AppComponent implements OnInit {
 
   filters: FilterSet;
   activeFilters: FilterSet;
+
+  carousels: Observable<Carousel[]>;
 
   constructor(
     private _resourceService: ResourceService,
@@ -70,6 +73,7 @@ export class AppComponent implements OnInit {
     )
 
     this.getLatestSermon();
+    this.carousels = this.generateCarousels();
   }
 
   flyoutOpened() {
@@ -99,13 +103,50 @@ export class AppComponent implements OnInit {
 
   getLatestSermon() {
     this.resourceStream.subscribe((resources: Resource[]) => {
-      this.latestSermon = resources.find((resource) => resource.ContentChannelId == 10);
+      this.latestSermon = resources.find((resource) => resource.Type == 10);
       if (this.latestSermon && this.latestSermon.Thumbnail)
       this.latestSermon.Thumbnail = this.latestSermon.Thumbnail.replace('295x166','1920x1080');
     })
   }
 
-  getCarousels() {
+  generateCarousels(): Observable<Carousel[]> {
+    return this.resourceStream.pipe(
+      map((resources) =>
+        resources.reduce((resourcesByChannel, resource) => {
+          let publishDate = new Date(resource.StartDateTime).getTime();
+          if (new Date().getTime() - publishDate < 1000*60*60*24*60) {
+            if (!resourcesByChannel[resource.Type]) {
+              resourcesByChannel[resource.Type] = [];
+            }
+
+            resourcesByChannel[resource.Type].push(resource);
+          }
+          return resourcesByChannel;
+        }, {})
+      ),
+      map((resourcesByChannel) => {
+        return Object.values(resourcesByChannel)
+          .sort((a: Resource[], b: Resource[]) => {
+            if (b.length == a.length) {
+              // Determine which has the most recent resource
+              let bLatestResource = new Date(b.sort((r1, r2) => new Date(r2.StartDateTime).getTime() - new Date(r1.StartDateTime).getTime())[0].StartDateTime).getTime();
+              let aLatestResource = new Date(a.sort((r1, r2) => new Date(r2.StartDateTime).getTime() - new Date(r1.StartDateTime).getTime())[0].StartDateTime).getTime();
+
+              return bLatestResource-aLatestResource;
+            } else {
+              return b.length - a.length
+            }
+          })
+          .map((values: Resource[]): Carousel => {
+            return {
+              filter: this.filters[0],
+              filterValue: this.filters[0].possibleAttributeValues.find((fv) => fv.Value == values[0].Type.toString()),
+              resources: values.slice(0, 4)
+            }
+          })
+          .slice(0,3);
+      })
+    )
   }
 
   fetchResources(ignore, page: number): Observable<Resource[]> {

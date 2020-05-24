@@ -1,4 +1,4 @@
-:host {
+.card-wrapper {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
     transition: transform .2s;
 }
 
-:host:hover {
+.card-wrapper:hover {
     transform: scale(1.02);
     cursor: pointer;
 }
@@ -41,16 +41,17 @@
 
 .card-header {
     // min-height: 2.75rem;
-    display: flex;
+    // display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 .type {
-    justify-self: flex-start;
+    float: right;
+    // justify-self: flex-start;
     background-color: #b4aa9e;
     color: white;
-    padding: .4rem 0 .4rem .5rem;
+    padding: .4rem .5rem .4rem .5rem;
     font-size: .75rem;
     margin-left: 1rem;
     margin-top: -.15rem;
@@ -83,6 +84,12 @@
 
 .card-footer {
     justify-content: space-between;
+
+    i {
+        margin-right:.5rem;
+        display: inline-block;
+        color: grey;
+    }
 }
 
 .text-content {

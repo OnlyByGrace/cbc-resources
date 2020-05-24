@@ -1,6 +1,6 @@
 export class Resource {
     Id: number;
-    ContentChannelId: number;
+    Type: number;
     Title: string;
     Preview: string;
     StartDateTime: string;

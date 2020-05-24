@@ -21,6 +21,8 @@ describe('App Config Service', () => {
             let appConfigService = new AppConfigService();
             appConfigService.loadConfig();
 
+            sampleFilters[0].currentValue = sampleFilters[0].possibleAttributeValues[0];
+
             expect(appConfigService.getConfig()).toEqual(sampleFilters);
 
             el.remove();

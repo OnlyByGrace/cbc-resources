@@ -43,6 +43,13 @@
 
   </div>
 
+  <!-- <div *ngFor="let carousel of carousels | async">
+      <h4>Latest {{carousel?.filterValue?.Display}} ></h4>
+      <resource-card *ngFor="let resource of carousel.resources" [resource]="resource" class="col-xs-10 col-sm-6 col-md-4 col-lg-3">
+
+      </resource-card>
+  </div> -->
+
   <resource-list [resources]='resourceStream'>
 
   </resource-list>

@@ -1,3 +1,1 @@
-<a class="card-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let resource of resources | async" href="http://localhost:58469/resources/{{resource.Id}}">
-    <resource-card [resource]="resource"></resource-card>
-</a>
+<resource-card *ngFor="let resource of resources | async" [resource]="resource"></resource-card>

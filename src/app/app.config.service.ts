@@ -23,7 +23,7 @@ export class AppConfigService {
     getAttributeDisplayValue(resource: Resource, attributeName: string): string {
         if (!resource[attributeName]) return '';
     
-        let multiSelectValues = resource[attributeName].split(',');
+        let multiSelectValues = resource[attributeName].toString().split(',');
         let attribute = this.availableFilters
             .find((filter) => filter.Name == attributeName)
             .possibleAttributeValues
