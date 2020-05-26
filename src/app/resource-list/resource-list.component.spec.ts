@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { from, Observable } from 'rxjs';
-import { StubsModule, StubResourceService, StubResourceCard } from 'src/stubs/stubs.module';
+import { StubsModule, StubResourceService, StubResourceCard } from 'src/stubs/stubs.module.spec';
 import { Resource } from '../Resource';
 import { ResourceService, FilterSet } from '../resource.service';
 import { ResourceListComponent } from './resource-list.component';

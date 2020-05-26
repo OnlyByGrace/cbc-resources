@@ -1,38 +1,54 @@
-<a class="card-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3" href="http://localhost:58469/resources/{{resource.Id}}">
-    <div class="card-header">
-        <div class="type">
-            <!-- <i *ngIf="resource.VideoAvailable" class='fa fa-video'></i>
-            <i *ngIf="resource.AudioAvailable" class='fa fa-headphones'></i>
-            <i *ngIf="resource.TextAvailable" class='fa fa-newspaper'></i> -->
-            {{ getAttributeDisplayValue(resource, 'Type') }}
+<a class="base col-xs-12 col-sm-6 col-md-4 col-lg-3" href="/resources/{{resource.Id}}">
+    <div class="card-wrapper">
+        <!-- <div class="card-header col-sm-12" [class.col-xs-6]="resource.VideoAvailable != 0 || resource.AudioAvailable != 0" [class.col-xs-12]="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
+        <div class="card-header" [class.full-width]="resource.VideoAvailable == 0 && resource.AudioAvailable == 0">
+            <div class="type">
+                <!-- <i *ngIf="resource.VideoAvailable" class='fa fa-video'></i>
+                <i *ngIf="resource.AudioAvailable" class='fa fa-headphones'></i>
+                <i *ngIf="resource.TextAvailable" class='fa fa-newspaper'></i> -->
+                {{ getAttributeDisplayValue(resource, 'Type') }}
+            </div>
+            <div class="title">{{ resource.Title }}</div>
+
+            <div class="tagline">
+                {{resource.StartDateTime | date:'longDate'}} by {{getAttributeDisplayValue(resource, 'Author')}}
+            </div>
+
+            <div class="card-footer hidden visible-xs-block">
+                <!-- <ng-container *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
+                <div class="scripture" *ngIf="resource.Scripture">{{resource.Scripture}}</div>
+                <div class="topic" *ngIf="resource.Topic">{{getAttributeDisplayValue(resource, 'Topic')}}</div>
+                <!-- </ng-container> -->
+    
+                <p *ngIf="!resource.Scripture && !resource.Topic && (resource.VideoAvailable == 1 || resource.AudioAvailable == 1)"
+                    class="text-content">{{resource.Preview | striphtml}}
+                </p>
+            </div>
         </div>
-        <div class="title">{{ resource.Title }}</div>
-    </div>
 
-    <div class="tagline">
-        <div class="date">{{resource.StartDateTime | date:'longDate'}}</div>
-        by 
-        <div class="author">{{getAttributeDisplayValue(resource, 'Author')}}</div>
-    </div>
 
-    <div class="content">
-        <p *ngIf="resource.VideoAvailable == 0" class="text-content">{{resource.Preview | striphtml}}
-        </p>
+        <!-- <div class="content col-sm-12" [class.col-xs-6]="resource.VideoAvailable != 0 || resource.AudioAvailable != 0" [class.col-xs-12]="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
+        <div class="content" [class.full-width]="resource.VideoAvailable == 0 && resource.AudioAvailable == 0">
+            <p *ngIf="resource.VideoAvailable == 0" class="text-content">{{resource.Preview | striphtml}}
+            </p>
 
-        <p *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 1 && resource.Preview == ''" class="audio-preview"><i class="fa fa-headphones"></i></p>
+            <p *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 1 && resource.Preview == ''"
+                class="audio-preview"><i class="fa fa-headphones"></i></p>
 
-        <div class="preview-wrapper" *ngIf="resource.VideoAvailable == 1">
-            <img src="{{resource.Thumbnail}}" style="width: 100%;margin-left: auto; margin-right: auto;">
+            <div class="preview-wrapper" *ngIf="resource.VideoAvailable == 1">
+                <img src="{{resource.Thumbnail}}" style="width: 100%;margin-left: auto; margin-right: auto;">
+            </div>
         </div>
-    </div>
 
-    <div class="card-footer">
-        <!-- <ng-container *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
+        <div class="card-footer hidden-xs">
+            <!-- <ng-container *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
             <div class="scripture" *ngIf="resource.Scripture">{{resource.Scripture}}</div>
             <div class="topic" *ngIf="resource.Topic">{{getAttributeDisplayValue(resource, 'Topic')}}</div>
-        <!-- </ng-container> -->
+            <!-- </ng-container> -->
 
-        <p *ngIf="!resource.Scripture && !resource.Topic && (resource.VideoAvailable == 1 || resource.AudioAvailable == 1)" class="text-content">{{resource.Preview | striphtml}}
-        </p>
+            <p *ngIf="!resource.Scripture && !resource.Topic && (resource.VideoAvailable == 1 || resource.AudioAvailable == 1)"
+                class="text-content">{{resource.Preview | striphtml}}
+            </p>
+        </div>
     </div>
 </a>

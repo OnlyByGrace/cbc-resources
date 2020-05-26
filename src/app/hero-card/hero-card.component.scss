@@ -2,14 +2,14 @@
     background-color: white;
     position: relative;
     min-height: 20.8rem;
-    max-height: 20.8rem;
+    // max-height: 20.8rem;
     overflow: hidden;
-    margin: 1rem;
+    margin: 1rem 0;
 
     display: flex;
-    flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
+    flex-direction: column-reverse;
 
     box-shadow: 0px 0px 2px 0px #cccccc;
     //border: 1px solid hsl(0 0% 90% / 1);
@@ -19,9 +19,10 @@
     transition: transform 0.2s;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     :host {
         flex-direction: row;
+        margin: 1rem;
     }
 
     .details {
@@ -38,7 +39,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .details {
         margin: 1rem
     }
@@ -51,6 +52,10 @@
 
 .preview {
     text-align: right;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     .preview-wrapper {
         img {
@@ -67,6 +72,7 @@
 
 .details h3 {
     margin: 0px;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
     font-style: italic;
 }

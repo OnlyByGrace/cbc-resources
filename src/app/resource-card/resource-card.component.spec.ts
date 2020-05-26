@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResourceCardComponent } from './resource-card.component';
-import { StubsModule, StubAppConfigService } from 'src/stubs/stubs.module';
+import { StubsModule, StubAppConfigService } from 'src/stubs/stubs.module.spec';
 import { AppConfigService } from '../app.config.service';
 
 describe('ResourceCardComponent', () => {

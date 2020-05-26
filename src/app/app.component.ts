@@ -1,11 +1,12 @@
-import { ChangeDetectorRef, Component, ElementRef, HostListener, NgZone, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { fromEvent, Observable, Subject } from 'rxjs';
+import { concatMap, map, scan, startWith, switchMap, tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { AppConfigService } from './app.config.service';
-import { FilterBarComponent } from './filter-bar/filter-bar.component';
-import { Filter, FilterSet, ResourceService } from './resource.service';
-import { Resource } from './Resource';
-import { Observable, Subject, fromEvent, from, throwError } from 'rxjs';
-import { concatMap, debounceTime, startWith, scan, switchMap, tap, take, map, reduce } from 'rxjs/operators';
 import { Carousel } from './Carousel';
+import { FilterBarComponent } from './filter-bar/filter-bar.component';
+import { Resource } from './Resource';
+import { Filter, FilterSet, ResourceService } from './resource.service';
 
 @Component({
   selector: 'app-root',
@@ -59,7 +60,6 @@ export class AppComponent implements OnInit {
         concatMap(this.fetchResources.bind(this)),
         scan((resources, newResources) => {
           if (newResources.length < 36) this.endOfResults = true;
-          console.log(newResources.length);
           resources.push(...newResources);
           return resources;
         }),
@@ -103,7 +103,7 @@ export class AppComponent implements OnInit {
 
   getLatestSermon() {
     this.resourceStream.subscribe((resources: Resource[]) => {
-      this.latestSermon = resources.find((resource) => resource.Type == 10);
+      this.latestSermon = resources.find((resource) => resource.Type == environment.sermonContentChannelId);
       if (this.latestSermon && this.latestSermon.Thumbnail)
       this.latestSermon.Thumbnail = this.latestSermon.Thumbnail.replace('295x166','1920x1080');
     })

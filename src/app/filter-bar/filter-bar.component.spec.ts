@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FilterBarComponent } from './filter-bar.component';
 import { ResourceService } from '../resource.service';
-import { StubResourceService } from 'src/stubs/stubs.module';
+import { StubResourceService } from 'src/stubs/stubs.module.spec';
 
 describe('FilterBarComponent', () => {
   let component: FilterBarComponent;

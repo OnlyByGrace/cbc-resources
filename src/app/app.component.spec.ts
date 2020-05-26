@@ -1,12 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { StubFilterBar, StubResourceService, StubsModule, generateRandomResources } from 'src/stubs/stubs.module';
+import { from } from 'rxjs';
+import { generateRandomResources, StubFilterBar, StubsModule } from 'src/stubs/stubs.module.spec';
 import { AppComponent } from './app.component';
 import { AppConfigService } from './app.config.service';
-import { ResourceService } from './resource.service';
-import { from } from 'rxjs';
 import { Carousel } from './Carousel';
-import { filter } from 'rxjs/operators';
+import { ResourceService } from './resource.service';
 
 let sampleFilters = require('./sample-filters.json');
 

@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   serverUrl: '/api',
-  resourceUrl: '/Webhooks/Lava.ashx/resources/query'
+  resourceUrl: '/Webhooks/Lava.ashx/resources/query',
+  sermonContentChannelId: 11
 };
 
 /*
