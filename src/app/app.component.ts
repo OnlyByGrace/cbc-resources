@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, ViewChild, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { concatMap, map, scan, startWith, switchMap, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
@@ -13,7 +13,7 @@ import { Filter, FilterSet, ResourceService } from './resource.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy .OnPush
 })
 export class AppComponent implements OnInit {
   title = 'cbc-resources';
@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   hashChange: Observable<Event> = fromEvent(window, 'hashchange');
   nextPage: Subject<number> = new Subject();
   resourceStream: Observable<Resource[]>;
+  resources: Resource[];
 
   @ViewChild(FilterBarComponent, { static: true })
   filterBar: FilterBarComponent;
@@ -35,7 +36,7 @@ export class AppComponent implements OnInit {
   filters: FilterSet;
   activeFilters: FilterSet;
 
-  carousels: Observable<Carousel[]>;
+  carousels: Carousel[];
 
   constructor(
     private _resourceService: ResourceService,
@@ -53,10 +54,15 @@ export class AppComponent implements OnInit {
 
     this.resourceStream = this.hashChange.pipe(
       startWith(0),
-      tap(this.parseFilterValuesFromUrl.bind(this)),
-      tap(() => { this.endOfResults = false }),
+      tap(() => {
+        this.endOfResults = false;
+        this.resources = null;
+        this.parseFilterValuesFromUrl();
+        this._cd.markForCheck();
+      }),
       switchMap(() => this.nextPage.pipe(
-        startWith(0),
+        startWith(0), 
+        tap(() => this.loading = true),
         concatMap(this.fetchResources.bind(this)),
         scan((resources, newResources) => {
           if (newResources.length < 36) this.endOfResults = true;
@@ -64,16 +70,23 @@ export class AppComponent implements OnInit {
           return resources;
         }),
         tap((resources) => {
+          if (this.isHomeScreen()) {
+            this.getLatestSermon(resources);
+            this.generateCarousels(resources);
+          }
+
           if (resources.length < 36) this.endOfResults = true;
           this.loading = false;
-          this._cd.markForCheck();
+          // this._cd.markForCheck();
         })
       )
       )
     )
-
-    this.getLatestSermon();
-    this.carousels = this.generateCarousels();
+    
+    this.resourceStream.subscribe((resources) => {
+      this.resources = resources;
+      this._cd.markForCheck();
+    })
   }
 
   flyoutOpened() {
@@ -91,6 +104,10 @@ export class AppComponent implements OnInit {
     this.filterBar.showFilterFlyout(filter);
   }
 
+  isHomeScreen(): boolean {
+    return this.activeFilters && this.activeFilters.length == 1 && this.activeFilters[0].currentValue.Display == "All Types";
+  }
+
   filterTopic() {
     if (!this.activeFilters) return;
 
@@ -101,52 +118,45 @@ export class AppComponent implements OnInit {
     return "";
   }
 
-  getLatestSermon() {
-    this.resourceStream.subscribe((resources: Resource[]) => {
-      this.latestSermon = resources.find((resource) => resource.Type == environment.sermonContentChannelId);
-      if (this.latestSermon && this.latestSermon.Thumbnail)
-      this.latestSermon.Thumbnail = this.latestSermon.Thumbnail.replace('295x166','1920x1080');
-    })
+  getLatestSermon(resources: Resource[]) {
+    this.latestSermon = resources.find((resource) => resource.Type == environment.sermonContentChannelId);
+    if (this.latestSermon && this.latestSermon.Thumbnail)
+    this.latestSermon.Thumbnail = this.latestSermon.Thumbnail.replace('295x166','1920x1080');
   }
 
-  generateCarousels(): Observable<Carousel[]> {
-    return this.resourceStream.pipe(
-      map((resources) =>
-        resources.reduce((resourcesByChannel, resource) => {
-          let publishDate = new Date(resource.StartDateTime).getTime();
-          if (new Date().getTime() - publishDate < 1000*60*60*24*60) {
-            if (!resourcesByChannel[resource.Type]) {
-              resourcesByChannel[resource.Type] = [];
-            }
+  generateCarousels(resources: Resource[]) {
+    let resourcesByChannel = resources.reduce((resourcesByChannel, resource) => {
+      let publishDate = new Date(resource.StartDateTime).getTime();
+      if (new Date().getTime() - publishDate < 1000*60*60*24*60) {
+        if (!resourcesByChannel[resource.Type]) {
+          resourcesByChannel[resource.Type] = [];
+        }
 
-            resourcesByChannel[resource.Type].push(resource);
-          }
-          return resourcesByChannel;
-        }, {})
-      ),
-      map((resourcesByChannel) => {
-        return Object.values(resourcesByChannel)
-          .sort((a: Resource[], b: Resource[]) => {
-            if (b.length == a.length) {
-              // Determine which has the most recent resource
-              let bLatestResource = new Date(b.sort((r1, r2) => new Date(r2.StartDateTime).getTime() - new Date(r1.StartDateTime).getTime())[0].StartDateTime).getTime();
-              let aLatestResource = new Date(a.sort((r1, r2) => new Date(r2.StartDateTime).getTime() - new Date(r1.StartDateTime).getTime())[0].StartDateTime).getTime();
+        resourcesByChannel[resource.Type].push(resource);
+      }
+      return resourcesByChannel;
+    }, {});
 
-              return bLatestResource-aLatestResource;
-            } else {
-              return b.length - a.length
-            }
-          })
-          .map((values: Resource[]): Carousel => {
-            return {
-              filter: this.filters[0],
-              filterValue: this.filters[0].possibleAttributeValues.find((fv) => fv.Value == values[0].Type.toString()),
-              resources: values.slice(0, 4)
-            }
-          })
-          .slice(0,3);
-      })
-    )
+    this.carousels = Object.values(resourcesByChannel)
+    .sort((a: Resource[], b: Resource[]) => {
+      if (b.length == a.length) {
+        // Determine which has the most recent resource
+        let bLatestResource = new Date(b.sort((r1, r2) => new Date(r2.StartDateTime).getTime() - new Date(r1.StartDateTime).getTime())[0].StartDateTime).getTime();
+        let aLatestResource = new Date(a.sort((r1, r2) => new Date(r2.StartDateTime).getTime() - new Date(r1.StartDateTime).getTime())[0].StartDateTime).getTime();
+
+        return bLatestResource-aLatestResource;
+      } else {
+        return b.length - a.length
+      }
+    })
+    .map((values: Resource[]): Carousel => {
+      return {
+        filter: this.filters[0],
+        filterValue: this.filters[0].possibleAttributeValues.find((fv) => fv.Value == values[0].Type.toString()),
+        resources: values.slice(0, 4)
+      }
+    })
+    .slice(0,3);
   }
 
   fetchResources(ignore, page: number): Observable<Resource[]> {
@@ -166,17 +176,25 @@ export class AppComponent implements OnInit {
         matchingFilter.currentValue = matchingFilter.possibleAttributeValues.find(possibleValue => possibleValue.Value == value);
     }
 
+    this.setActiveFilters();
+  }
+  
+  filtersChanged(filterSet: FilterSet) {
+    this.filters = [...filterSet];
+
+    this.setActiveFilters();
+    
+    window.location.hash = "#" + this.activeFilters.filter(filter => filter.currentValue.Value != null).map(filter => filter.Name + "=" + filter.currentValue.Value).join("&");
+    console.log("manual:", this.activeFilters);
+  }
+
+  setActiveFilters() {
+    // Make sure we always show "All Types"
     if (this.filters[0].currentValue == undefined) {
       this.filters[0].currentValue = this.filters[0].possibleAttributeValues[0];
     }
 
     this.activeFilters = this.filters.filter((filter) => filter.currentValue != undefined);
-  }
-
-  filtersChanged(filterSet: FilterSet) {
-    this.filters = [...filterSet];
-    this.activeFilters = this.filters.filter((filter) => filter.currentValue != undefined);
-    window.location.hash = "#" + this.activeFilters.filter(filter => filter.currentValue.Value != null).map(filter => filter.Name + "=" + filter.currentValue.Value).join("&");
   }
 
   loadNextPage() {

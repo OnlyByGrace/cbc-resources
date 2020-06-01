@@ -1,8 +1,12 @@
 <div #inner class="inner">
 
-    <div class="search" (click)="toggleSearch()">
-        <span class="fa fa-search"></span>
+    <div class="home" (click)="goHome()">
+        <span class="fa fa-home"></span>
     </div>
+
+    <!-- <div class="search" (click)="toggleSearch()">
+        <span class="fa fa-search"></span>
+    </div> -->
 
     <div class="searchbox" *ngIf="searchMode">
         <input #search class="search-field" type="text" (keyup)="searchTerm$.next($event.target.value)">
@@ -12,9 +16,12 @@
 
     <ng-container *ngIf="!searchMode">
         <div class="dropdown" *ngFor="let filter of filters" [class.active]="filter.active"
-            (click)="toggleFlyout(filter, $event)" attr.data-filter-name="{{filter.Name}}">
-            <span class="text">{{ filter.currentValue?.Display || filter.Name }}</span>
-            <span class="glyph fa fa-angle-down"></span>
+            attr.data-filter-name="{{filter.Name}}" (click)="toggleFlyout(filter, $event)" >
+            <span>
+                <span class="text">{{ filter.currentValue?.Display || filter.Name }}</span>
+                <span class="glyph fa fa-angle-down" *ngIf="!filter.currentValue || filter.currentValue.Value == null"></span>
+            </span>
+            <span class="glyph fa fa-times" *ngIf="filter.currentValue && filter.currentValue.Value != null" (click)="cancelValue(filter, $event)"></span>
         </div>
     </ng-container>
 

@@ -10,6 +10,8 @@ import { ResourceListComponent } from './resource-list/resource-list.component';
 import { ResourceComponent } from './resource/resource.component';
 import { StripHtmlPipe } from './strip-html.pipe';
 import { HeroCardComponent } from './hero-card/hero-card.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselCardComponent } from './carousel/carousel-card/carousel-card.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { HeroCardComponent } from './hero-card/hero-card.component';
     ResourceCardComponent,
     ResourceComponent,
     StripHtmlPipe,
-    HeroCardComponent
+    HeroCardComponent,
+    CarouselComponent,
+    CarouselCardComponent
   ],
   imports: [
     BrowserModule,

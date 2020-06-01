@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  serverUrl: '/api',
+  serverUrl: 'https://new.christbaptist.org',
   resourceUrl: '/Webhooks/Lava.ashx/resources/query',
-  sermonContentChannelId: 11
+  sermonContentChannelId: 10
 };
 
 /*

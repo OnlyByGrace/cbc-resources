@@ -18,17 +18,24 @@
 
 .filter-descriptions {
     text-align: center;
-    margin-top: 15px;
-    color: #999999;
+    margin-top: 1rem;
+    color: #333;
 
     a {
-        color: #999999;
+        color: black;
     }
     
     span.filter-english {
-        color: #999999;
+        color: black;
         text-decoration: underline;
         cursor: pointer;
+        // font-weight: 600;
+    }
+}
+
+@media (min-width: 768px) {
+    .filter-descriptions {
+        font-size: 1.2rem;
     }
 }
 
@@ -37,6 +44,11 @@
 //     overflow: hidden;
 //     text-align: center;
 // }
+
+.more-resources {
+    font-size: 1rem;
+    font-weight: 600;
+}
 
 .loader {
     clear: both;

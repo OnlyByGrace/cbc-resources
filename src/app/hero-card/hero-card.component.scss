@@ -70,17 +70,30 @@
     cursor: pointer;
 }
 
-.details h3 {
-    margin: 0px;
+.type {
+    margin-left: -1rem;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
-    font-style: italic;
+    // font-style: italic;
+    font-size: .9rem;
+    float: left;
+    color: white;
+    background-color: #b4aa9e;
+    display: inline;
+    padding: 0.4rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .type {
+        font-size: 1.2rem;
+        margin-left: -2rem;
+    }
 }
 
 .title {
     font-size: 1.5rem;
     font-weight: 600;
     flex-grow: 0;
+    clear: both;
     // padding: 0px 1rem;
     // border-bottom: 1px solid #00000011;
 }

@@ -28,9 +28,9 @@
   </div>
 
 
-  <a href="/resources/{{latestSermon.Id}}" *ngIf="latestSermon && activeFilters && activeFilters.length == 1 && activeFilters[0].currentValue.Display == 'All Types'">
-  <hero-card [resource]="latestSermon">
-  </hero-card>
+  <a href="/resources/{{latestSermon.Id}}" *ngIf="latestSermon && isHomeScreen()">
+    <hero-card [resource]="latestSermon" style="margin-bottom: 2rem;">
+    </hero-card>
   </a>
 
   <div class="class-available col-xs-12" *ngIf="filterTopic()">
@@ -43,18 +43,19 @@
 
   </div>
 
-  <!-- <div *ngFor="let carousel of carousels | async">
-      <h4>Latest {{carousel?.filterValue?.Display}} ></h4>
-      <resource-card *ngFor="let resource of carousel.resources" [resource]="resource" class="col-xs-10 col-sm-6 col-md-4 col-lg-3">
+  <ng-container *ngIf="isHomeScreen()">
+    <card-carousel *ngFor="let carousel of carousels" [carousel]="carousel" class="col-xs-12"></card-carousel>
+  </ng-container>
 
-      </resource-card>
-  </div> -->
 
-  <resource-list [resources]='resourceStream'>
+  <h3 class="more-resources col-xs-12" *ngIf="!loading && isHomeScreen()">More Resources</h3>
+  <resource-list [resources]='resources'>
 
   </resource-list>
 
-  <div class="loader" *ngIf="loading"><img src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/tail-spin.svg" /></div>
+  <div class="loader" *ngIf="loading"><img
+      src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/tail-spin.svg" /></div>
+  <!-- <div class="loader" *ngIf="loading"><img src="assets/tail-spin.svg" /></div> -->
 
   <div class="row">
     <div class="col-xs-12" style="text-align: center; margin-bottom: 20px;" *ngIf="!loading && !endOfResults">

@@ -1,0 +1,9 @@
+.title {
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .title {
+        padding: 0px;
+    }
+}

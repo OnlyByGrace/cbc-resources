@@ -1,0 +1,7 @@
+<a href="#{{carousel.filter.Name}}={{carousel.filterValue.Value}}">
+ Latest {{ carousel.filterValue.Display }} >
+</a>
+
+<div class="carousel">
+        <carousel-card *ngFor="let resource of carousel.resources" class="col-xs-8 col-sm-6 col-md-4 col-lg-3" [resource]="resource"></carousel-card>
+</div>

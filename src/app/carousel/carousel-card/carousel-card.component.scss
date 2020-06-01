@@ -1,64 +1,34 @@
-@media (max-width: 767px) {
-    .base {
-        padding: 0;
-    }
+:host {
+    flex-shrink: 0;
+    padding: 0;
 }
+
+// @media (min-width: 768px) {
+//     :host {
+//         width: 25%;
+//     }
+// }
 
 .card-wrapper {
     background-color: white;
 
-    padding: 1rem 0px 1.5rem 0px;
+    padding: 1rem 0px 0.9rem 0px;
     // margin-left: 5%;
     // margin-right: 5%;
-    position: relative;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+
+    min-height: 18.8rem;
+    max-height: 18.8rem;
+
+    margin: 1rem 1rem 1rem 0;
 
     display: flex;
+    flex-direction: column;
     overflow: hidden;
 
-    flex-wrap: wrap;
-
-    // box-shadow: 0px 0px 2px 0px #cccccc;
-    border: 1px solid hsl(0 0% 90% / 1);
+    box-shadow: 0px 0px 2px 0px #cccccc;
+    //border: 1px solid hsl(0 0% 90% / 1);
 
     transition: transform 0.2s;
-}
-
-@media (min-width: 768px) {
-    .card-wrapper {
-        flex-direction: column;
-
-        min-height: 20.8rem;
-        max-height: 20.8rem;
-
-        padding-bottom: 1rem;
-
-        flex-wrap: nowrap;
-
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .card-wrapper.preview-card {
-        .card-header {
-            min-height: 6.7rem;
-        }
-
-        .content {
-            justify-content: flex-start;
-        }
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .card-wrapper {
-        min-height: 18rem;
-        max-height: 18rem;
-    }
-    .card-wrapper.preview-card .card-header {
-        min-height: 5.7rem;
-    }
 }
 
 .card-wrapper:hover {
@@ -90,7 +60,6 @@
     // justify-content: space-between;
     // align-items: flex-start;
     padding: 0px;
-    width: 55%;
 
     &.full-width {
         width: 100%;
@@ -101,15 +70,8 @@
     }
 }
 
-@media (min-width: 768px) {
-    .card-header {
-        width: auto;
-    }
-}
-
 .type {
     // justify-self: flex-start;
-    display: inline-block;
     background-color: #b4aa9e;
     color: white;
     padding: 0.4rem 0.5rem 0.4rem 0.5rem;
@@ -119,18 +81,14 @@
     margin-top: -0.15rem;
     white-space: nowrap;
 
+    float: right;
+    display: block;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+
     i {
         margin-right: 0.5rem;
         display: inline-block;
-    }
-}
-
-@media (min-width: 768px) {
-    .type {
-        float: right;
-        display: block;
-        margin-left: 0.5rem;
-        margin-bottom: 0.5rem;
     }
 }
 
@@ -141,12 +99,12 @@
     flex-grow: 1;
     padding: 0px;
 
-    margin-right: 1rem;
-
-    width: 40%;
+    width: auto;
+    max-height: auto;
+    align-self: inherit;
+    margin-right: 0px;
 
     display: flex;
-    position: relative;
     flex-direction: column;
     justify-content: center;
 
@@ -156,36 +114,14 @@
         width: 100%;
         max-height: 4em;
         display: block;
+        max-height: initial;
+        display: flex;
     }
 
     ::ng-deep p {
         padding: 0rem 1rem;
     }
-
-    .text-content .more {
-        height: 1.5rem;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-    }
 }
-
-@media (min-width: 768px) {
-    .content {
-        width: auto;
-        max-height: auto;
-        align-self: inherit;
-        margin-right: 0px;
-
-        &.full-width {
-            max-height: initial;
-            display: flex;
-        }
-    }
-}
-
 .tagline {
     margin-bottom: 1rem;
     flex-wrap: no-wrap;

@@ -12,6 +12,9 @@ export class ResourceListComponent implements OnInit {
   @Input()
   resources: Observable<Resource[]>;
 
+  @Input()
+  title: string;
+
   constructor() { }
 
   ngOnInit() {

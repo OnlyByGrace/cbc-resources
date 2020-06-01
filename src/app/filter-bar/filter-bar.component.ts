@@ -1,6 +1,7 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Filter, FilterSet, FilterValue, ResourceService } from '../resource.service';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'cbc-filter-bar',
@@ -81,7 +82,7 @@ export class FilterBarComponent implements OnInit {
     (<any>filter).active = true;
 
     (<HTMLElement>this.indicator.nativeElement).style.left = dropdown.offsetLeft - 5 + "px";
-    this.indicator.nativeElement.style.width = dropdown.clientWidth + 10 + "px";
+    this.indicator.nativeElement.style.width = dropdown.offsetWidth + 10 + "px";
     this.child.nativeElement.scrollLeft = dropdown.offsetLeft - 40;
 
     if (!this.flyoutOpen) {
@@ -127,8 +128,22 @@ export class FilterBarComponent implements OnInit {
     }
   }
 
+  goHome() {
+    this.filtersChanged.emit(this.filters.map((filter) => {
+      filter.currentValue = undefined;
+      return filter;
+    }));
+  }
+
+  cancelValue(filter, event: Event) {
+    event.stopImmediatePropagation();
+    event.stopPropagation();
+    event.preventDefault();
+    this.valueSelected(filter, filter.possibleAttributeValues[0])
+  }
+
   valueSelected(filter: Filter, value: FilterValue) {
-    if (value.default == true && filter.Name != "All Types") {
+    if (value && value.default == true && filter.Name != "All Types") {
       filter.currentValue = undefined;
     } else {
       filter.currentValue = value;
