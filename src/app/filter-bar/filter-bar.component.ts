@@ -42,7 +42,7 @@ export class FilterBarComponent implements OnInit {
   indicator: ElementRef;
   @ViewChild('flyOut', { static: true })
   flyOut: ElementRef;
-  @ViewChild('search', { static: false })
+  @ViewChild('search')
   search: ElementRef;
 
   activeFilter: Filter = null;
