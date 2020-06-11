@@ -7,11 +7,6 @@ import { AppConfigService } from './app.config.service';
 import { Carousel } from './Carousel';
 import { ResourceService } from './resource.service';
 
-let sampleFilters = require('./sample-filters.json');
-
-let appConfigService = {
-    getConfig() { return sampleFilters }
-}
 
 let resourceService = jasmine.createSpyObj('resourceService', ['getResources']);
 
@@ -27,7 +22,6 @@ describe('AppComponent', () => {
                 AppComponent
             ],
             providers: [
-                { provide: AppConfigService, useValue: appConfigService },
                 { provide: ResourceService, useValue: resourceService },
             ]
         }).compileComponents();
@@ -42,27 +36,12 @@ describe('AppComponent', () => {
         expect(app).toBeTruthy();
     });
 
-    it('should load possible attribute values into dropdowns via AppConfigService', (done) => {
-        const filterBar = fixture.debugElement.query(By.directive(StubFilterBar));
-        fixture.detectChanges();
-
-        fixture.whenStable().then(() => {
-            expect(filterBar.componentInstance.filters).toEqual(sampleFilters);
-            done();
-        })
-
-    });
-
     // it should allow ordering by passage
 
     // it should allow continous scrolling
 
-    it('should show carousels for the 3 most frequently updated types', () => {
-
-    });
-
-    describe('getCarousels', () => {
-        it('should set carousels to be 3 most frequently updated types in latest resource set', (done) => {
+    describe('generateCarousels', () => {
+        it('should set carousels to be most frequently updated (in 90 days) types in latest resource set', () => {
             const app = fixture.componentInstance;
 
             /* Defined "most frequently updated" as those with the most number of posts
@@ -101,8 +80,9 @@ describe('AppComponent', () => {
                 }
             ]
 
-            let appConfigService = TestBed.get(AppConfigService);
-            spyOn(appConfigService, 'getConfig').and.returnValue(filters);
+            app.activeFilters = filters;
+
+            spyOn(app, 'isHomeScreen').and.returnValue(true);
 
             // Channel 1 = 3, all in past 60 days
             // Channel 2 = 3, 1 50 days ago
@@ -132,38 +112,39 @@ describe('AppComponent', () => {
 
             resourceService.getResources.and.returnValue(from([resources]));
 
-            fixture.detectChanges();
+            // fixture.detectChanges();
+            app.generateCarousels(resources);
 
             // Carousels should be
             // Channel 1 (3 items)
             // Channel 3 (2 items)
             // Channel 4 (1 item)
 
-            fixture.whenStable().then(() => {
-                app.carousels.subscribe((carousels: Carousel[]) => {
-                    console.log(carousels);
-
-                    expect(carousels).toEqual([
-                        {
-                            filter: app.filters[0],
-                            filterValue: app.filters[0].possibleAttributeValues[0],
-                            resources: [resources[0], resources[1], resources[2]]
-                        },
-                        {
-                            filter: app.filters[0],
-                            filterValue: app.filters[0].possibleAttributeValues[2],
-                            resources: [resources[6], resources[7]]
-                        },
-                        {
-                            filter: app.filters[0],
-                            filterValue: app.filters[0].possibleAttributeValues[3],
-                            resources: [resources[8]]
-                        }
-                    ])
-
-                    done();
-                })
-            })
+            // fixture.whenStable().then(() => {
+                expect(app.carousels).toEqual([
+                    {
+                        filter: app.activeFilters[0],
+                        filterValue: app.activeFilters[0].possibleAttributeValues[0],
+                        resources: [resources[0], resources[1], resources[2]]
+                    },
+                    {
+                        filter: app.activeFilters[0],
+                        filterValue: app.activeFilters[0].possibleAttributeValues[2],
+                        resources: [resources[6], resources[7]]
+                    },
+                    {
+                        filter: app.activeFilters[0],
+                        filterValue: app.activeFilters[0].possibleAttributeValues[3],
+                        resources: [resources[8]]
+                    },
+                    {
+                        filter: app.activeFilters[0],
+                        filterValue: app.activeFilters[0].possibleAttributeValues[1],
+                        resources: [resources[3]]
+                    }
+                ])
+                // done();
+            // })
 
 
         })

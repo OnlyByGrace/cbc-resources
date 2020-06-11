@@ -33,7 +33,7 @@ resourceServiceStub.getResources = function (filterSet: FilterSet) {
   selector: 'resource-list-wrapper'
 })
 class ResourceListWrapper {
-  sampleResources: Observable<Resource[]> = from([[<Resource>{
+  sampleResources: Resource[] = [<Resource>{
     Id: 1,
     Type: 10,
     Title: '2',
@@ -48,7 +48,7 @@ class ResourceListWrapper {
     AudioAvailable: 0,
     TextAvailable: 0,
     VideoAvailable: 0
-  }]]);
+  }];
 
   @ViewChild(ResourceListComponent, { static: true })
   resourceList: ResourceListComponent;

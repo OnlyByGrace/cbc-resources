@@ -13,7 +13,7 @@ import { Filter, FilterSet, ResourceService } from './resource.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy .OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
   title = 'cbc-resources';
@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
 
   configurationId: string;
 
-  hashChange: Observable<Event> = fromEvent(window, 'hashchange');
   nextPage: Subject<number> = new Subject();
   resourceStream: Observable<Resource[]>;
   resources: Resource[];
@@ -33,14 +32,12 @@ export class AppComponent implements OnInit {
   @ViewChild(FilterBarComponent, { static: true })
   filterBar: FilterBarComponent;
 
-  filters: FilterSet;
   activeFilters: FilterSet;
 
   carousels: Carousel[];
 
   constructor(
     private _resourceService: ResourceService,
-    private _appConfigService: AppConfigService,
     private _cd: ChangeDetectorRef,
     private _zone: NgZone,
     el: ElementRef) {
@@ -48,16 +45,13 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.filters = this._appConfigService.getConfig();
-
     this.loading = true;
 
-    this.resourceStream = this.hashChange.pipe(
-      startWith(0),
-      tap(() => {
+    this.resourceStream = this.filterBar.filtersChanged.pipe(
+      tap((filters) => {
+        this.activeFilters = filters || [];
         this.endOfResults = false;
         this.resources = null;
-        this.parseFilterValuesFromUrl();
         this._cd.markForCheck();
       }),
       switchMap(() => this.nextPage.pipe(
@@ -108,6 +102,10 @@ export class AppComponent implements OnInit {
     return this.activeFilters && this.activeFilters.length == 1 && this.activeFilters[0].currentValue.Display == "All Types";
   }
 
+  // filtersChanged(filterSet: FilterSet) {
+  //   this.activeFilters = filterSet;
+  // }
+
   filterTopic() {
     if (!this.activeFilters) return;
 
@@ -124,6 +122,7 @@ export class AppComponent implements OnInit {
     this.latestSermon.Thumbnail = this.latestSermon.Thumbnail.replace('295x166','1920x1080');
   }
 
+  // Generate carousels from the 3 most frequently updated resources in the past 60 days
   generateCarousels(resources: Resource[]) {
     let resourcesByChannel = resources.reduce((resourcesByChannel, resource) => {
       let publishDate = new Date(resource.StartDateTime).getTime();
@@ -137,7 +136,10 @@ export class AppComponent implements OnInit {
       return resourcesByChannel;
     }, {});
 
-    this.carousels = Object.values(resourcesByChannel)
+    this.carousels = Object.keys(resourcesByChannel).reduce((values, key) => {
+      values.push(resourcesByChannel[key])
+      return values;
+    }, [])
     .sort((a: Resource[], b: Resource[]) => {
       if (b.length == a.length) {
         // Determine which has the most recent resource
@@ -151,50 +153,16 @@ export class AppComponent implements OnInit {
     })
     .map((values: Resource[]): Carousel => {
       return {
-        filter: this.filters[0],
-        filterValue: this.filters[0].possibleAttributeValues.find((fv) => fv.Value == values[0].Type.toString()),
+        filter: this.activeFilters[0],
+        filterValue: this.activeFilters[0].possibleAttributeValues.find((fv) => fv.Value == values[0].Type.toString()),
         resources: values.slice(0, 4)
       }
     })
-    .slice(0,3);
+    // .slice(0,3);
   }
 
   fetchResources(ignore, page: number): Observable<Resource[]> {
     return this._resourceService.getResources(this.activeFilters, page + 1);
-  }
-
-  parseFilterValuesFromUrl() {
-    let urlFilterValues = window.location.hash.substring(1).split('&');
-
-    this.filters.forEach(filter => filter.currentValue = null);
-
-    for (let filterValue of urlFilterValues) {
-      let [key, value] = filterValue.split('=');
-
-      let matchingFilter = this.filters.find(filter => filter.Name == key);
-      if (matchingFilter)
-        matchingFilter.currentValue = matchingFilter.possibleAttributeValues.find(possibleValue => possibleValue.Value == value);
-    }
-
-    this.setActiveFilters();
-  }
-  
-  filtersChanged(filterSet: FilterSet) {
-    this.filters = [...filterSet];
-
-    this.setActiveFilters();
-    
-    window.location.hash = "#" + this.activeFilters.filter(filter => filter.currentValue.Value != null).map(filter => filter.Name + "=" + filter.currentValue.Value).join("&");
-    console.log("manual:", this.activeFilters);
-  }
-
-  setActiveFilters() {
-    // Make sure we always show "All Types"
-    if (this.filters[0].currentValue == undefined) {
-      this.filters[0].currentValue = this.filters[0].possibleAttributeValues[0];
-    }
-
-    this.activeFilters = this.filters.filter((filter) => filter.currentValue != undefined);
   }
 
   loadNextPage() {

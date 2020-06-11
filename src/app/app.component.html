@@ -1,9 +1,8 @@
-<cbc-filter-bar (flyoutOpened)="flyoutOpened()" [filters]="filters" (flyoutClosed)="flyoutClosed()"
-  (filtersChanged)="filtersChanged($event)"></cbc-filter-bar>
+<cbc-filter-bar (flyoutOpened)="flyoutOpened()" (flyoutClosed)="flyoutClosed()"></cbc-filter-bar>
 
 <div class="body container" [class.blurred]="flyoutOpen">
 
-  <div class="filter-descriptions" *ngIf="activeFilters">
+  <div class="filter-descriptions" *ngIf="activeFilters && !isHomeScreen()">
     Showing
     <ng-container *ngFor="let filter of activeFilters">
       <ng-container [ngSwitch]="filter.Name">
@@ -19,8 +18,8 @@
             class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Scripture -->
         <a *ngSwitchCase="'Topic'" (click)="filterClicked(filter)"> about <span
             class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Topic -->
-        <a *ngSwitchCase="'Search'" (click)="filterClicked(filter)"> results for <span
-            class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Search -->
+        <span *ngSwitchCase="'Search'" (click)="filterClicked(filter)">search results for <span
+            class="filter-english">{{filter.currentValue.Value}}</span></span> <!-- Search -->
         <a *ngSwitchDefault (click)="filterClicked(filter)"> results for <span
             class="filter-english">{{filter.currentValue.Display}}</span></a> <!-- Search -->
       </ng-container>
@@ -48,8 +47,8 @@
   </ng-container>
 
 
-  <h3 class="more-resources col-xs-12" *ngIf="!loading && isHomeScreen()">More Resources</h3>
-  <resource-list [resources]='resources'>
+  <!-- <h3 class="more-resources col-xs-12" *ngIf="!loading && !isHomeScreen()">More Resources</h3> -->
+  <resource-list [resources]='resources' *ngIf="!isHomeScreen()">
 
   </resource-list>
 
@@ -58,10 +57,10 @@
   <!-- <div class="loader" *ngIf="loading"><img src="assets/tail-spin.svg" /></div> -->
 
   <div class="row">
-    <div class="col-xs-12" style="text-align: center; margin-bottom: 20px;" *ngIf="!loading && !endOfResults">
+    <div class="col-xs-12" style="text-align: center; margin-bottom: 20px;" *ngIf="!loading && !endOfResults && !isHomeScreen()">
       <div class="btn btn-default" style="clear: both;" (click)="loadNextPage()">Load more</div>
     </div>
-    <div class="col-xs-12" style="text-align: center; margin-bottom: 20px;" *ngIf="endOfResults">
+    <div class="col-xs-12" style="text-align: center; margin-bottom: 20px; margin-top: 20px;" *ngIf="endOfResults">
       <div style="clear: both;">End of Results</div>
     </div>
   </div>

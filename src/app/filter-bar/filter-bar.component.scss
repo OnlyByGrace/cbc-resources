@@ -65,11 +65,15 @@
 
     div.search {
         margin-right: 20px;
+
+        &.border {
+            border-bottom: 3px solid #97002e;
+        }
     }
 
     div.searchbox {
         max-width: 500px;
-        width: 80%;
+        width: 85%;
         display: inline-block;
     }
 

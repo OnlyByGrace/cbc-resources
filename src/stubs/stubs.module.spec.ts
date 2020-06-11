@@ -1,4 +1,4 @@
-import { NgModule, Component, Input, ViewEncapsulation } from '@angular/core';
+import { NgModule, Component, Input, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
 import { FilterSet } from 'src/app/resource.service';
 import { from, Observable } from 'rxjs';
 import { Resource } from 'src/app/Resource';
@@ -7,10 +7,10 @@ import { StripHtmlPipe } from 'src/app/strip-html.pipe';
 export function generateRandomResources(num: number): Resource[] {
     let resources: Resource[] = [];
 
-    for (let i = 0; i<num; i++) {
+    for (let i = 0; i < num; i++) {
         resources.push({
             Id: i,
-            Type: Math.round(Math.random()*10),
+            Type: Math.round(Math.random() * 10),
             AudioAvailable: Math.round(Math.random()),
             TextAvailable: Math.round(Math.random()),
             VideoAvailable: Math.round(Math.random()),
@@ -29,7 +29,7 @@ export function generateRandomResources(num: number): Resource[] {
 }
 
 @Component({
-    selector:'resource-list',
+    selector: 'resource-list',
     template: ''
 })
 export class StubResourceList {
@@ -51,13 +51,20 @@ export class StubResourceCard {
     template: ''
 })
 export class StubFilterBar {
-  @Input()
-  filters: string;
+    @Input()
+    filters: string;
+
+    @Output()
+    flyoutOpened = new EventEmitter();
+    @Output()
+    flyoutClosed = new EventEmitter();
+    @Output()
+    filtersChanged = new EventEmitter<FilterSet>();
 }
 
 export class StubAppConfigService {
-   getAttributeDisplayValue(resource: Resource, attribute: string) { return ""; }
-   getConfig() { return "" }
+    getAttributeDisplayValue(resource: Resource, attribute: string) { return ""; }
+    getConfig() { return "" }
 }
 
 export class StubResourceService {

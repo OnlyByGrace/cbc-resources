@@ -1,4 +1,4 @@
-<a class="base" href="/resources/{{resource.Id}}">
+<a class="base" *ngIf="resource" href="/resources/{{resource.Id}}">
     <div class="card-wrapper">
         <!-- <div class="card-header col-sm-12" [class.col-xs-6]="resource.VideoAvailable != 0 || resource.AudioAvailable != 0" [class.col-xs-12]="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
         <div class="card-header" [class.full-width]="resource.VideoAvailable == 0 && resource.AudioAvailable == 0">

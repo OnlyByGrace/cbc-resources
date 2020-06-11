@@ -16,19 +16,19 @@ import { environment } from '../environments/environment';
 // }
 
 export interface FilterValue {
-  Value: string;
-  Display: string;
+    Value: string;
+    Display: string;
 
-  default?: boolean;
-  featured?: boolean;
+    default?: boolean;
+    featured?: boolean;
 }
 
 export interface Filter {
-  Id: number;
-  Name: string;
+    Id: number;
+    Name: string;
 
-  possibleAttributeValues?: FilterValue[];
-  currentValue?: FilterValue;
+    possibleAttributeValues?: FilterValue[];
+    currentValue?: FilterValue;
 }
 
 export type FilterSet = Filter[];
@@ -66,7 +66,7 @@ export type FilterSet = Filter[];
 
 //   if (!a.startValue) return -1;
 //   if (!b.startValue) return 1;
-  
+
 //   var nameA = books.indexOf(a.displayName); // ignore upper and lowercase
 //   var nameB = books.indexOf(b.displayName); // ignore upper and lowercase
 //   if (nameA < nameB) {
@@ -83,20 +83,20 @@ export type FilterSet = Filter[];
 // var sortFunction = (a: FilterValue, b: FilterValue) => {
 //   if (!a.startValue) return -1;
 //   if (!b.startValue) return 1;
-  
+
 //   var nameA = a.displayName.toUpperCase(); // ignore upper and lowercase
 //   var nameB = b.displayName.toUpperCase(); // ignore upper and lowercase
 //   if (nameA < nameB) {
 //     return -1;
 //   }
 //   if (nameA > nameB) {
-  //     return 1;
-  //   }
-  
-  //   // names must be equal
-  //   return 0;
-  // }
-  
+//     return 1;
+//   }
+
+//   // names must be equal
+//   return 0;
+// }
+
 
 // const AvailableFilters: FilterSet = [
 //   {
@@ -226,25 +226,36 @@ export type FilterSet = Filter[];
 // ]
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class ResourceService {
 
-  constructor(private _httpClient: HttpClient) { }
+    constructor(private _httpClient: HttpClient) { }
 
-  getResources(filterSet: FilterSet, page?: number): Observable<Resource[]> {
-    if (!filterSet) return null;
-    let filterParams = filterSet.filter(filter => filter.currentValue != null).reduce((params, filter) => {
-        if (filter.currentValue.Value != null) params[filter.Id] = filter.currentValue.Value;
-        return params;
-    }, {});
+    getResources(filterSet: FilterSet, page?: number): Observable<Resource[]> {
+        if (!filterSet) return null;
 
-    if (page) {
-      filterParams['Page'] = page;
+        let filterParams;
+        let queryUrl = environment.resourceUrl;
+
+        if (filterSet[0]?.Name == "Search") {
+            filterParams = {
+                "terms" : filterSet[0].currentValue.Value
+            }
+            queryUrl = environment.searchUrl;
+        } else {
+            filterParams = filterSet.filter(filter => filter.currentValue != null).reduce((params, filter) => {
+                if (filter.currentValue.Value != null) params[filter.Id] = filter.currentValue.Value;
+                return params;
+            }, {});
+        }
+
+        if (page) {
+            filterParams['Page'] = page;
+        }
+
+        return this._httpClient.get<Resource[]>(environment.serverUrl + queryUrl, {
+            params: filterParams
+        });
     }
-
-    return this._httpClient.get<Resource[]>(environment.serverUrl + environment.resourceUrl, {
-      params: filterParams
-    });
-  }
 }
