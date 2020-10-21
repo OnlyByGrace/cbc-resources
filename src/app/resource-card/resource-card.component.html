@@ -16,7 +16,7 @@
 
             <div class="card-footer hidden visible-xs-block">
                 <!-- <ng-container *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
-                <div class="scripture" *ngIf="resource.Scripture">{{resource.Scripture}}</div>
+                <div class="scripture" *ngIf="resource.Passage">{{resource.Passage}}</div>
                 <div class="topic" *ngIf="resource.Topic">{{getAttributeDisplayValue(resource, 'Topic')}}</div>
                 <!-- </ng-container> -->
     
@@ -44,7 +44,7 @@
 
         <div class="card-footer hidden-xs">
             <!-- <ng-container *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
-            <div class="scripture" *ngIf="resource.Scripture">{{resource.Scripture}}</div>
+            <div class="scripture" *ngIf="resource.Passage">{{resource.Passage}}</div>
             <div class="topic" *ngIf="resource.Topic">{{getAttributeDisplayValue(resource, 'Topic')}}</div>
             <!-- </ng-container> -->
         </div>

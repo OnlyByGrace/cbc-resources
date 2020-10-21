@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   loading = false;
   endOfResults = false;
 
-  latestSermon: Resource;
+  heroResource: Resource;
 
   configurationId: string;
 
@@ -64,9 +64,15 @@ export class AppComponent implements OnInit {
           return resources;
         }),
         tap((resources) => {
+          this.heroResource = null;
+
           if (this.isHomeScreen()) {
             this.getLatestSermon(resources);
             this.generateCarousels(resources);
+          }
+
+          if (this.showPodcastInfo()) {
+            this.getHeroResource(resources);
           }
 
           if (resources.length < 36) this.endOfResults = true;
@@ -78,7 +84,7 @@ export class AppComponent implements OnInit {
     )
     
     this.resourceStream.subscribe((resources) => {
-      this.resources = resources;
+      this.resources = resources.filter(resource => resource.Id != this.heroResource?.Id);
       this._cd.markForCheck();
     })
   }
@@ -100,11 +106,23 @@ export class AppComponent implements OnInit {
 
   isHomeScreen(): boolean {
     return this.activeFilters && this.activeFilters.length == 1 && this.activeFilters[0].currentValue.Display == "All Types";
-  }
+}
 
   // filtersChanged(filterSet: FilterSet) {
   //   this.activeFilters = filterSet;
   // }
+
+  showPodcastInfo() {
+    return this.activeFilters.length == 1 && (this.activeFilters[0]?.currentValue.Value == environment.sermonContentChannelId.toString() || this.activeFilters[0]?.currentValue.Value == environment.devotionContentChannelId.toString());
+  }
+
+  isSermonsScreen() {
+    return this.activeFilters.length == 1 && (this.activeFilters[0]?.currentValue.Value == environment.sermonContentChannelId.toString());
+  }
+  
+  isDevotionsScreen() {
+    return this.activeFilters.length == 1 && (this.activeFilters[0]?.currentValue.Value == environment.devotionContentChannelId.toString());
+  }
 
   filterTopic() {
     if (!this.activeFilters) return;
@@ -117,9 +135,15 @@ export class AppComponent implements OnInit {
   }
 
   getLatestSermon(resources: Resource[]) {
-    this.latestSermon = resources.find((resource) => resource.Type == environment.sermonContentChannelId);
-    if (this.latestSermon && this.latestSermon.Thumbnail)
-    this.latestSermon.Thumbnail = this.latestSermon.Thumbnail.replace('295x166','1920x1080');
+    this.heroResource = resources.find((resource) => resource.Type == environment.sermonContentChannelId);
+    if (this.heroResource && this.heroResource.Thumbnail)
+    this.heroResource.Thumbnail = this.heroResource.Thumbnail.replace('295x166','1920x1080');
+  }
+
+  getHeroResource(resources: Resource[]) {
+    this.heroResource = resources[0];
+    if (this.heroResource && this.heroResource.Thumbnail)
+    this.heroResource.Thumbnail = this.heroResource.Thumbnail.replace('295x166','1920x1080');
   }
 
   // Generate carousels from the 3 most frequently updated resources in the past 60 days

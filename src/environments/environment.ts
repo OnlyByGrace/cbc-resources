@@ -4,10 +4,11 @@
 
 export const environment = {
   production: false,
-  serverUrl: 'https://new.christbaptist.org',
+  serverUrl: 'https://rock.christbaptist.org',
   resourceUrl: '/Webhooks/Lava.ashx/resources/query',
   searchUrl: '/Webhooks/Lava.ashx/resources/search',
-  sermonContentChannelId: 10
+  sermonContentChannelId: 13,
+  devotionContentChannelId: 15
 };
 
 /*

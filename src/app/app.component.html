@@ -2,6 +2,39 @@
 
 <div class="body container" [class.blurred]="flyoutOpen">
 
+  <div class="podcast-description" *ngIf="showPodcastInfo()">
+
+    <div class="podcast-icons">
+      <p style="font-size: .75rem; display: inline-block;">Subcribe to our {{activeFilters[0].currentValue.Display}}
+        podcast</p>
+      <!-- <img src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/spotify.svg" alt="">
+      <img src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/apple.svg" alt="">
+      <img src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/google.svg" alt="">
+      <img src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/rss.svg" alt=""> -->
+
+      <span *ngIf="isSermonsScreen()">
+        <a href="https://open.spotify.com/show/5ZI9A8piFknZiMJSWJnsqV"><img src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/spotify.svg" alt=""></a>
+        <a href="https://podcasts.apple.com/us/podcast/christ-baptist-church-sermons/id1517732042"><img src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/apple.svg" alt=""></a>
+        <a
+          href="https://podcasts.google.com/?feed=aHR0cHM6Ly9yb2NrLmNocmlzdGJhcHRpc3Qub3JnL0dldENoYW5uZWxGZWVkLmFzaHg_Q2hhbm5lbElkPTEzJkNvdW50PTIw"><img
+            src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/google.svg" alt=""></a>
+      </span>
+
+      <span *ngIf="isDevotionsScreen()">
+        <a href="https://open.spotify.com/show/6h23apSiu9PMFw5lWT11Dr"><img src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/spotify.svg" alt=""></a>
+        <a href="https://podcasts.apple.com/us/podcast/christ-baptist-church-devotions/id1517731422"><img src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/apple.svg" alt=""></a>
+        <a
+          href="https://podcasts.google.com/?feed=aHR0cHM6Ly9yb2NrLmNocmlzdGJhcHRpc3Qub3JnL0dldENoYW5uZWxGZWVkLmFzaHg_Q2hhbm5lbElkPTE1JlRlbXBsYXRlSWQ9MTA1MCZDb3VudD0yMA"><img
+            src="/Plugins/org_christbaptist/Resources/cbc-resources/assets/google.svg" alt=""></a>
+      </span>
+    </div>
+
+    <a *ngIf="!loading && heroResource" href="/resources/{{heroResource.Id}}">
+      <hero-card *ngIf="!loading" [resource]="heroResource" style="margin-bottom: 2rem;">
+      </hero-card>
+    </a>
+  </div>
+
   <div class="filter-descriptions" *ngIf="activeFilters && !isHomeScreen()">
     Showing
     <ng-container *ngFor="let filter of activeFilters">
@@ -26,9 +59,8 @@
     </ng-container>
   </div>
 
-
-  <a href="/resources/{{latestSermon.Id}}" *ngIf="latestSermon && isHomeScreen()">
-    <hero-card [resource]="latestSermon" style="margin-bottom: 2rem;">
+  <a *ngIf="!loading && heroResource && isHomeScreen()" href="/resources/{{heroResource.Id}}">
+    <hero-card [resource]="heroResource" style="margin-bottom: 2rem;">
     </hero-card>
   </a>
 
@@ -39,10 +71,9 @@
     </div>
     <div class="text">Did you know? We have a Sunday School class studying {{ filterTopic() }}. It meets at 9:00am
       Sunday mornings in LL - 05.</div>
-
   </div>
 
-  <ng-container *ngIf="isHomeScreen()">
+  <ng-container *ngIf="isHomeScreen() && !loading">
     <card-carousel *ngFor="let carousel of carousels" [carousel]="carousel" class="col-xs-12"></card-carousel>
   </ng-container>
 
@@ -57,7 +88,8 @@
   <!-- <div class="loader" *ngIf="loading"><img src="assets/tail-spin.svg" /></div> -->
 
   <div class="row">
-    <div class="col-xs-12" style="text-align: center; margin-bottom: 20px;" *ngIf="!loading && !endOfResults && !isHomeScreen()">
+    <div class="col-xs-12" style="text-align: center; margin-bottom: 20px;"
+      *ngIf="!loading && !endOfResults && !isHomeScreen()">
       <div class="btn btn-default" style="clear: both;" (click)="loadNextPage()">Load more</div>
     </div>
     <div class="col-xs-12" style="text-align: center; margin-bottom: 20px; margin-top: 20px;" *ngIf="endOfResults">

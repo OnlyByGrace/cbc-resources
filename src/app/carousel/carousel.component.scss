@@ -1,6 +1,8 @@
 :host {
     // background-color: hsla(0, 0%, 92%, 1);
     // margin-bottom: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -14,6 +16,7 @@ a {
     // text-transform: uppercase;
     // font-style: italic;
     font-weight: 600;
+    font-size: 1.2rem;
     display: block;
     // background-color: hsla(0, 0%, 92%, 1);
     
@@ -28,11 +31,10 @@ a {
     display: flex;
     overflow: auto;
 
-    min-height: 22.5rem;
-    max-height: 22.5rem;
+    min-height: 23.5rem;
+    max-height: 23.5rem;
     
     padding-left: 2px;
-    
 }
 
 // @media (min-width: 992px) {

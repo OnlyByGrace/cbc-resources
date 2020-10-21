@@ -33,6 +33,34 @@
     }
 }
 
+.podcast-description {
+    
+    text-align: center;
+    margin: 1rem 0rem;
+
+    p {
+        text-align: center;
+        font-size: 1rem;
+        padding-right: 5px;
+    }
+
+    .podcast-icons {
+        margin-bottom: 1.5rem;
+    }
+
+    .podcast-icons img {
+        // width: 25px;
+        height: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
+    hero-card {
+        text-align: left;
+    }
+}
+
 @media (min-width: 768px) {
     .filter-descriptions {
         font-size: 1.2rem;

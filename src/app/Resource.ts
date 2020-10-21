@@ -9,6 +9,7 @@ export class Resource {
     Topic: string;
     Series: string;
     Thumbnail: string;
+    Passage?: string;
 
     AudioAvailable: number;
     VideoAvailable: number;

@@ -3,5 +3,6 @@ export const environment = {
   serverUrl: '',
   resourceUrl: '/Webhooks/Lava.ashx/resources/query',
   searchUrl: '/Webhooks/Lava.ashx/resources/search',
-  sermonContentChannelId: 13
+  sermonContentChannelId: 13,
+  devotionContentChannelId: 15
 };

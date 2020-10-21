@@ -1,5 +1,5 @@
 <div class="details">
-    <div class="tag"><div class="type">Latest Sermon</div></div>
+    <div class="tag"><div class="type">Latest <span *ngIf="resource.Type == 13">Sermon</span><span *ngIf="resource.Type == 15">Devotion</span></div></div>
     <div class="title">
         {{ resource.Title }}
 

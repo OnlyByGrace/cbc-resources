@@ -1,5 +1,5 @@
-<a class="base" *ngIf="resource" href="/resources/{{resource.Id}}">
-    <div class="card-wrapper">
+<a class="base" href="/resources/{{resource.Id}}">
+    <div class="card-wrapper" [class.preview-card]="resource.VideoAvailable == 1 || resource.AudioAvailable == 1">
         <!-- <div class="card-header col-sm-12" [class.col-xs-6]="resource.VideoAvailable != 0 || resource.AudioAvailable != 0" [class.col-xs-12]="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
         <div class="card-header" [class.full-width]="resource.VideoAvailable == 0 && resource.AudioAvailable == 0">
             <div class="type">
@@ -18,10 +18,12 @@
 
         <!-- <div class="content col-sm-12" [class.col-xs-6]="resource.VideoAvailable != 0 || resource.AudioAvailable != 0" [class.col-xs-12]="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
         <div class="content" [class.full-width]="resource.VideoAvailable == 0 && resource.AudioAvailable == 0">
-            <p *ngIf="resource.VideoAvailable == 0" class="text-content">{{resource.Preview | striphtml}}
+            <p *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 0" class="text-content">
+                {{resource.Preview | striphtml}}
+                <span class="more"></span>
             </p>
 
-            <p *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 1 && resource.Preview == ''"
+        <p *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 1"
                 class="audio-preview"><i class="fa fa-headphones"></i></p>
 
             <div class="preview-wrapper" *ngIf="resource.VideoAvailable == 1">
@@ -31,13 +33,9 @@
 
         <div class="card-footer">
             <!-- <ng-container *ngIf="resource.VideoAvailable == 0 && resource.AudioAvailable == 0"> -->
-            <div class="scripture" *ngIf="resource.Scripture">{{resource.Scripture}}</div>
+            <div class="scripture" *ngIf="resource.Passage">{{resource.Passage}}</div>
             <div class="topic" *ngIf="resource.Topic">{{getAttributeDisplayValue(resource, 'Topic')}}</div>
             <!-- </ng-container> -->
-
-            <p *ngIf="!resource.Scripture && !resource.Topic && (resource.VideoAvailable == 1 || resource.AudioAvailable == 1)"
-                class="text-content">{{resource.Preview | striphtml}}
-            </p>
         </div>
     </div>
 </a>
